@@ -1,0 +1,24 @@
+{
+  "name": "webtech",
+  "version": "1.0.0",
+  "description": "a web tech point book",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eloven/web.git"
+  },
+  "keywords": [
+    "html5",
+    "css3",
+    "es6"
+  ],
+  "author": "guobin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eloven/web/issues"
+  },
+  "homepage": "https://github.com/eloven/web#readme"
+}

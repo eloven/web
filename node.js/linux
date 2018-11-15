@@ -1,0 +1,40 @@
+3、常用Linux命令
+
+//查看当前目录下的文件和文件夹列表
+ls
+
+//查看所有文件和文件夹
+ls -al
+
+//与ls -al一样，是其别名
+ll
+
+//进入到 /home/hello 目录
+cd /home/hello
+
+//进入到当前目录的上级目录
+cd ..
+
+//查看当前所在的全路径
+pwd
+
+//删除app.js
+rm app.js
+
+//删除 /home/hello 文件夹
+rm -r /home/hello
+
+//“任务管理器”
+top
+
+//查看所有进程
+ps aux
+
+//在所有进程中，删除包含 ssh 字符的进程
+ps aux | grep ssh
+
+//查看网卡信息
+ifconfig
+
+//重启服务
+systemctl restart network

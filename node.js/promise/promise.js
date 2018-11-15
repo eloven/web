@@ -10,7 +10,7 @@ const promise = new Promise(function(resolve, reject) {
 // 用Promise对象实现的 Ajax 操作的例子
 
 const getJSON = function(url) {
-    const _promise = new Promise(function(resolve, reject){
+    return new Promise(function(resolve, reject){
         const handler = function() {
             if (this.readyState !== 4) {
                 return;
@@ -29,8 +29,6 @@ const getJSON = function(url) {
         client.send();
 
     });
-
-    return _promise;
 };
 
 getJSON("/posts.json").then(function(json) {

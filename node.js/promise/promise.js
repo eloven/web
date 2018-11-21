@@ -1,10 +1,14 @@
 let isTrue;
+/**
+ * 使用系统自带的promise
+ * @type {Promise<any>}
+ */
 const promise = new Promise(function(resolve, reject) {
     // ... some code
     if (isTrue){
-        resolve(value);
+        resolve("value");
     } else {
-        reject(error);
+        reject("error");
     }
 });
 // 用Promise对象实现的 Ajax 操作的例子

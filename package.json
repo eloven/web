@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/eloven/web/issues"
   },
-  "homepage": "https://github.com/eloven/web#readme"
+  "homepage": "https://github.com/eloven/web#readme",
+  "dependencies": {
+    "@types/node": "^10.12.3",
+    "async": "^2.6.1",
+    "promise": "^8.0.2",
+    "xlsx": "^0.14.0"
+  }
 }

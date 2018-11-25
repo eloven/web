@@ -14,10 +14,13 @@ import {ProgressInterceptor} from './interceptors/progress.interceptor';
 import {TimingInterceptor} from './interceptors/timing.interceptor';
 import {ProgressBarService} from './core/service/progress-bar.service';
 import {NoopInterceptor} from './interceptors/noop.interceptor';
+import { LoginComponent } from './auth/login/login.component';
+import {AuthService} from './auth/auth.service';
 
 @NgModule({
     declarations: [
         AppComponent,
+        LoginComponent,
     ],
     imports: [
         BrowserModule,
@@ -32,6 +35,7 @@ import {NoopInterceptor} from './interceptors/noop.interceptor';
         {provide: HTTP_INTERCEPTORS, useClass: ProgressInterceptor, multi: true, deps: [ProgressBarService]},
         {provide: HTTP_INTERCEPTORS, useClass: TimingInterceptor, multi: true},
         {provide: HTTP_INTERCEPTORS, useClass: NoopInterceptor, multi: true},
+        AuthService,
     ],
     bootstrap: [AppComponent]
 })

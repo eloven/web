@@ -1,0 +1,41 @@
+<button mat-button>
+    <img src="https://material.angular.cn/assets/img/homepage/angular-white-transparent.svg" alt="angular">
+</button>
+<button mat-button [matMenuTriggerFor]="menu">布局</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>珊格系统</button>
+    <button mat-menu-item>卡片与分隔器</button>
+    <button mat-menu-item>列表与选项卡</button>
+    <button mat-menu-item>折叠面板与树</button>
+</mat-menu>
+<button mat-button [matMenuTriggerFor]="menu2">组件</button>
+<mat-menu #menu2="matMenu">
+    <button mat-menu-item>按钮图标</button>
+    <button mat-menu-item>导航器</button>
+    <button mat-menu-item>数据展示</button>
+    <button mat-menu-item>数据输入</button>
+    <button mat-menu-item>操作反馈</button>
+    <button mat-menu-item>辅助功能</button>
+</mat-menu>
+<button mat-button [matMenuTriggerFor]="menu3">服务</button>
+<mat-menu #menu3="matMenu">
+    <button mat-menu-item>国际化</button>
+    <button mat-menu-item>用户认证</button>
+    <button mat-menu-item>Http拦截器</button>
+    <button mat-menu-item>FileBase</button>
+    <button mat-menu-item>WebSocket</button>
+</mat-menu>
+<button mat-button [matMenuTriggerFor]="menu4">工具</button>
+<mat-menu #menu4="matMenu">
+    <button mat-menu-item>主题系统</button>
+    <button mat-menu-item>NgRx</button>
+    <button mat-menu-item>Web存储</button>
+    <button mat-menu-item>数据加密</button>
+</mat-menu>
+<button mat-button [matMenuTriggerFor]="menu5">功能</button>
+<mat-menu #menu5="matMenu">
+    <button mat-menu-item>图表集成</button>
+    <button mat-menu-item>流程图</button>
+    <button mat-menu-item>富文本编辑器</button>
+</mat-menu>
+

@@ -1,3 +1,3 @@
-## angular-chart
+## Material-start
 
-#### 使用angular构建常用的组件
+#### Material食用指南

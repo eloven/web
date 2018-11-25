@@ -1,0 +1,16 @@
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: #673ab7;
+    h1{
+        color: #ffffff;
+    }
+    button{
+        color: #673ab7;
+    }
+}

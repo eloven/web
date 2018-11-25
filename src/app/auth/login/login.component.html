@@ -1,0 +1,15 @@
+<div>
+    <form class="example-form">
+        <h2 style="color: #673ab7; text-align: center">注册登录</h2>
+        <mat-form-field class="example-full-width">
+            <input name="email" matInput placeholder="Email" [(ngModel)]="email">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <textarea name="password" matInput placeholder="Password" [(ngModel)]="password"></textarea>
+        </mat-form-field>
+        <div style="display: flex; flex-direction: row; justify-content: space-between">
+            <button mat-flat-button color="primary" type="submit" (click)="onSignUp()">注册</button>
+            <button mat-flat-button color="primary" type="submit" (click)="onSignIn()">登录</button>
+        </div>
+    </form>
+</div>

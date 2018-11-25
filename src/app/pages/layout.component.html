@@ -1,0 +1,23 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side" position="end">
+        <p>功能组件列表</p>
+        <p *ngIf="showFiller">查看更多的组件</p>
+        <button (click)="showFiller = !showFiller" mat-raised-button>
+            Toggle extra text
+        </button>
+    </mat-drawer>
+    <div class="example-sidenav-content">
+        <div class="page">
+            <header>
+                <app-header></app-header>
+                <app-search-bar (openSide)="drawer.toggle()"></app-search-bar>
+            </header>
+            <section>
+                <router-outlet></router-outlet>
+            </section>
+            <footer>
+                <app-footer></app-footer>
+            </footer>
+        </div>
+    </div>
+</mat-drawer-container>

@@ -18,4 +18,8 @@ export class SearchBarComponent implements OnInit {
     openSideMenu() {
         this.openSide.emit();
     }
+
+    openGithub() {
+        window.open('https://github.com/guobin211/material-start');
+    }
 }

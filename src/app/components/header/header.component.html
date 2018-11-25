@@ -1,5 +1,5 @@
-<button mat-button>
-    <img src="../../../../assets/angular-white.svg" alt="angular">
+<button mat-button (click)="navTo('home')">
+    <img src="../../../assets/angular-white.svg" alt="angular">
 </button>
 <button mat-button [matMenuTriggerFor]="menu">布局</button>
 <mat-menu #menu="matMenu">
@@ -22,7 +22,7 @@
     <button mat-menu-item>国际化</button>
     <button mat-menu-item>用户认证</button>
     <button mat-menu-item>Http拦截器</button>
-    <button mat-menu-item>FileBase</button>
+    <button mat-menu-item (click)="navTo('index/filebase')">FileBase</button>
     <button mat-menu-item>WebSocket</button>
 </mat-menu>
 <button mat-button [matMenuTriggerFor]="menu4">工具</button>

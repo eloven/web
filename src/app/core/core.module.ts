@@ -5,26 +5,24 @@ import {LoggerService} from './service/logger.service';
 import {ProgressBarService} from './service/progress-bar.service';
 import {HomeComponent} from './pages/home/home.component';
 import {Error404Component} from './pages/error404/error404.component';
-import {HeaderComponent} from './components/header/header.component';
-import {FooterComponent} from './components/footer/footer.component';
-import {SearchBarComponent} from './components/search-bar/search-bar.component';
 import {SideMenuComponent} from './components/side-menu/side-menu.component';
 import {HomeDashComponent} from './components/home-dash/home-dash.component';
+
 
 @NgModule({
     declarations: [
         HomeComponent,
         Error404Component,
-        HeaderComponent,
-        FooterComponent,
-        SearchBarComponent,
+
         SideMenuComponent,
-        HomeDashComponent],
+        HomeDashComponent,
+        ],
     imports: [
         SharedModule,
     ],
     exports: [
         SharedModule,
+        HomeComponent,
     ],
     providers: [
         LoggerService,

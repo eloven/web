@@ -22,5 +22,4 @@ export class HandsTableComponent implements OnInit {
             {id: 8, name: 'Jack Right', address: 'Michigan Avenue'},
         ];
     }
-
 }

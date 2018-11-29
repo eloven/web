@@ -34,8 +34,9 @@
 </mat-menu>
 <button mat-button [matMenuTriggerFor]="menu5">功能</button>
 <mat-menu #menu5="matMenu">
+    <button mat-menu-item>动画</button>
     <button mat-menu-item>图表集成</button>
-    <button mat-menu-item>流程图</button>
     <button mat-menu-item>富文本编辑器</button>
+    <button mat-menu-item (click)="navTo('index/table')">在线表格</button>
 </mat-menu>
 

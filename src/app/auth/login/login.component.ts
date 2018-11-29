@@ -19,13 +19,17 @@ export class LoginComponent implements OnInit {
      * 注册
      */
     onSignUp() {
-        this.auth.signUpUser(this.email, this.password);
+        if (this.email && this.password) {
+            this.auth.signUpUser(this.email, this.password);
+        }
     }
 
     /**
      * 登录
      */
     onSignIn() {
-        this.auth.signInUser(this.email, this.password);
+        if (this.email && this.password) {
+            this.auth.signInUser(this.email, this.password);
+        }
     }
 }

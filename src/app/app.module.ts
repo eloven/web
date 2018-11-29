@@ -14,18 +14,23 @@ import {ProgressInterceptor} from './interceptors/progress.interceptor';
 import {TimingInterceptor} from './interceptors/timing.interceptor';
 import {ProgressBarService} from './core/service/progress-bar.service';
 import {NoopInterceptor} from './interceptors/noop.interceptor';
-import { LoginComponent } from './auth/login/login.component';
+import {LoginComponent} from './auth/login/login.component';
 import {AuthService} from './auth/auth.service';
+import {LayoutComponent} from './pages/layout.component';
+import {HttpModule} from '@angular/http';
+
 
 @NgModule({
     declarations: [
         AppComponent,
         LoginComponent,
+        LayoutComponent,
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
+        HttpModule,
         HttpClientModule,
         CoreModule,
         ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
@@ -36,6 +41,8 @@ import {AuthService} from './auth/auth.service';
         {provide: HTTP_INTERCEPTORS, useClass: TimingInterceptor, multi: true},
         {provide: HTTP_INTERCEPTORS, useClass: NoopInterceptor, multi: true},
         AuthService,
+    ],
+    entryComponents: [
     ],
     bootstrap: [AppComponent]
 })

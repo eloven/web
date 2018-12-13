@@ -4,6 +4,11 @@
 /dist
 /tmp
 /out-tsc
+/app-builds
+/release
+main.js
+src/**/*.js
+*.js.map
 
 # dependencies
 /node_modules
@@ -30,9 +35,14 @@
 /coverage
 /libpeerconnection.log
 npm-debug.log
-yarn-error.log
 testem.log
 /typings
+package-lock.json
+
+# e2e
+/e2e/*.js
+!/e2e/protractor.conf.js
+/e2e/*.map
 
 # System Files
 .DS_Store

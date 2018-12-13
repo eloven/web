@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MongoConfiguration">
+    <option name="shellPath" value="/usr/local/Cellar/mongodb/4.0.4_1/bin/mongo" />
+  </component>
+</project>

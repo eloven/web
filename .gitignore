@@ -12,9 +12,10 @@ src/**/*.js
 
 # dependencies
 /node_modules
+/server/node_modules
+/server/dist
 
 # IDEs and editors
-/.idea
 .project
 .classpath
 .c9/

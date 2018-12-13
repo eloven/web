@@ -18,6 +18,7 @@ import {WebviewDirective} from './directives/webview.directive';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './components/home/home.component';
 import {SharedModule} from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -42,6 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
                 deps: [HttpClient]
             }
         }),
+        CoreModule,
         SharedModule,
     ],
     providers: [ElectronService],

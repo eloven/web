@@ -19,6 +19,7 @@ app.use(session({
     secret: 'SESSION_SECRET',
 }));
 
+//  Mid
 app.use((req, res, next) => {
     res.header('name', 'express');
     next();
@@ -31,6 +32,5 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }))
 app.get('/', (req, res, next) => {
     res.send('hello world express ok');
 });
-
 
 export default app;

@@ -1,7 +1,6 @@
 {
-    "PAGES": {
-        "HOME": {
-            "TITLE": "启动成功 !"
-        }
-    }
+  "APP_NAME": "Material Pro",
+  "HOME_PAGE": {
+    "TITLE": "主页"
+  }
 }

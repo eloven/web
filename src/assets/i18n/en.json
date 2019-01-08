@@ -1,7 +1,6 @@
 {
-  "PAGES": {
-      "HOME": {
-          "TITLE": "App works !"
-      }
+  "APP_NAME": "Material Pro",
+  "HOME_PAGE": {
+    "TITLE": "Home"
   }
 }

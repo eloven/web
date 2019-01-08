@@ -671,3 +671,6 @@ server/node_modules/request
 server/node_modules/request-promise
 server/node_modules/shelljs
 server/test/
+.idea/
+e2e/src/
+projects/

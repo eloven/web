@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-ngx-mp-table',
+  selector: 'ngx-mp-table',
   template: `
     <p>
       ngx-mp-table works!

@@ -140,7 +140,7 @@
       "root": "projects/ngx-mp-table",
       "sourceRoot": "projects/ngx-mp-table/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "ngx",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -175,7 +175,7 @@
       "root": "projects/ngx-mp-loading",
       "sourceRoot": "projects/ngx-mp-loading/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "ngx",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

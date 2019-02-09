@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgxMpLoadingService } from '../../projects/ngx-mp-loading/src/lib/ngx-mp-loading.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'material-pro';
+
+  constructor(private ngx: NgxMpLoadingService) {
+  }
+
+  showService() {
+    this.ngx.create();
+  }
 }

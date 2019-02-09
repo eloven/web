@@ -16,6 +16,7 @@
 
 # resource
 /resource
+/design
 
 # misc
 .DS_Store

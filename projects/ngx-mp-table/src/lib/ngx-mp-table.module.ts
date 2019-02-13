@@ -2,9 +2,13 @@ import { NgModule } from '@angular/core';
 import { NgxMpTableComponent } from './ngx-mp-table.component';
 
 @NgModule({
-  declarations: [NgxMpTableComponent],
+  declarations: [
+    NgxMpTableComponent
+  ],
   imports: [
   ],
-  exports: [NgxMpTableComponent]
+  exports: [
+    NgxMpTableComponent
+  ]
 })
 export class NgxMpTableModule { }

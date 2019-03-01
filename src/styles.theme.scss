@@ -1,0 +1,55 @@
+@import '~@angular/material/theming';
+
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!**
+@include mat-core();
+
+// Define the default theme (same as the example above).
+$candy-app-primary: mat-palette($mat-indigo);
+$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$candy-app-theme:   mat-light-theme($candy-app-primary, $candy-app-accent);
+
+// Include the default theme styles.
+.indigo-pink-theme{
+  @include angular-material-theme($candy-app-theme);
+}
+
+// Define an alternate dark theme.
+$dark-primary: mat-palette($mat-blue-grey);
+$dark-accent:  mat-palette($mat-amber, A200, A100, A400);
+$dark-warn:    mat-palette($mat-deep-orange);
+$dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+// Include the alternative theme styles inside of a block with a CSS class. You can make this
+// CSS class whatever you want. In this example, any component inside of an element with
+// `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.
+.work7-dark-theme {
+  @include angular-material-theme($dark-theme);
+}
+
+// 由于有一些组件是在一个全局的叠加容器中（比如 Menu，Select 和对话框等）
+// 这种情况下，应用黑夜主题（或其他非全局默认主题）需要一些额外步骤
+// 这种情况下我们需要定义一个全局样式类，例如上面的 my-dark-theme，然后
+// 在此类组件中讲 OverlayContainer 的样式指定成 my-dark-theme
+// import {OverlayContainer} from '@angular/material';
+// @NgModule({
+//   ...
+// })
+// export class MyAppModule {
+//   constructor(overlayContainer: OverlayContainer) {
+//     overlayContainer.themeClass = 'my-dark-theme';
+//   }
+// }
+
+// 如果希望改变默认的字体，可以采用下面的形式
+
+// Includes the default typography styles.
+// @include mat-typography();
+
+// Overrides one of the typography levels
+// @include mat-typography(
+//
+// );

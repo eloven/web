@@ -1,0 +1,81 @@
+/**
+  背景图
+*/
+@mixin bg-image($url){
+  background-image: url($url + "@2x.png");
+  @media screen and (min-resolution: 3dppx),(-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3) {
+    background-image: url($url + "@3x.png");
+  }
+}
+
+/**
+  设备分辨率（resolution）像素宽高比
+*/
+@mixin ratio($ratio: number) {
+  @media screen and
+  (min-resolution: $ratio + 'dppx'),
+  (-webkit-min-device-pixel-ratio: $ratio), /* Webkit-based browsers */
+  (min--moz-device-pixel-ratio: $ratio) {
+    @content;
+  }
+}
+/**
+  bottom边框适配
+ */
+@mixin border-bottom-px($height,$type,$color){
+  position:relative;
+  &::after{
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: $height $type $color;
+    content: '';
+    @include ratio(1.5){
+      transform:scaleY(0.7);
+    }
+    @include ratio(2){
+      transform:scaleY(0.5);
+    }
+    @include ratio(2.5){
+      transform:scaleY(0.4);
+    }
+    @include ratio(3){
+      transform:scaleY(0.333);
+    }
+    @include ratio(3.5){
+      transform:scaleY(0.2857);
+    }
+  }
+}
+/**
+    top边框适配
+ */
+@mixin border-top($height,$type,$color) {
+  position:relative;
+  &::after{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-top: $height $type $color;
+    content: '';
+    @include ratio(1.5){
+      transform:scaleY(0.7);
+    }
+    @include ratio(2){
+      transform:scaleY(0.5);
+    }
+    @include ratio(2.5){
+      transform:scaleY(0.4);
+    }
+    @include ratio(3){
+      transform:scaleY(0.333);
+    }
+    @include ratio(3.5){
+      transform:scaleY(0.2857);
+    }
+  }
+}

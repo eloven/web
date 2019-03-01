@@ -4,22 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxMpLoadingModule } from 'ngx-mp-loading';
-import { FullscreenOverlayContainer, OverlayContainer } from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
-    BrowserAnimationsModule,
-    NgxMpLoadingModule,
+    BrowserAnimationsModule
   ],
-  providers: [
-    {provide: OverlayContainer, useClass: FullscreenOverlayContainer}
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

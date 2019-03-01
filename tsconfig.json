@@ -17,20 +17,6 @@
     "lib": [
       "es2018",
       "dom"
-    ],
-    "paths": {
-      "ngx-mp-table": [
-        "dist/ngx-mp-table"
-      ],
-      "ngx-mp-table/*": [
-        "dist/ngx-mp-table/*"
-      ],
-      "ngx-mp-loading": [
-        "dist/ngx-mp-loading"
-      ],
-      "ngx-mp-loading/*": [
-        "dist/ngx-mp-loading/*"
-      ]
-    }
+    ]
   }
 }

@@ -1,45 +1,46 @@
-# Created by .ignore support plugin (hsz.mobi)
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
 /dist
 /tmp
 /out-tsc
-/app-builds
-/release
-
-# production
-/dist
-/.vscode
+# Only exists if Bazel was run
+/bazel-out
 
 # dependencies
 /node_modules
 
-# resource
-/resource
-/design
+# profiling files
+chrome-profiler-events.json
+speed-measure-plugin.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
 
 # misc
-.DS_Store
-npm-debug.log*
-yarn-error.log
-
+/.sass-cache
+/connect.lock
 /coverage
-.idea
-yarn.lock
-package-lock.json
-*bak
-.vscode
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
 
-
-# visual studio code
-.history
-*.log
-
-functions/mock
-.temp/**
-
-
-# umi
-.umi
-.umi-production
-
+# System Files
+.DS_Store
+Thumbs.db

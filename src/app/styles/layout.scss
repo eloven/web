@@ -35,10 +35,9 @@
 }
 
 // 截断文本
-.truncate-text {
+.cut-text {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 200px;
 }
 

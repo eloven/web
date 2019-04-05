@@ -12,6 +12,7 @@ import { HtmlPipe } from './pipes/html.pipe';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { RouteReuseStrategy } from '@angular/router';
 import { AppRoutingCache } from './app-routing-cache';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AppRoutingCache } from './app-routing-cache';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    CoreModule,
     AppRoutingModule,
     BrowserAnimationsModule,
   ],

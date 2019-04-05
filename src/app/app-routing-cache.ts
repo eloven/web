@@ -8,6 +8,15 @@ export class AppRoutingCache implements RouteReuseStrategy {
   public static handles: RouteHandles = {};
 
   /**
+   * 计算url路径
+   * @param route
+   */
+   static getCurrentUrl(route: ActivatedRouteSnapshot) {
+    return route['_routerState'].url.replace(/\//g, '_')
+      + '_' + (route.routeConfig.loadChildren || route.routeConfig.component.toString().split('(')[0].split(' ')[1]);
+  }
+
+  /**
    * 当前路由是否需要存储
    * @param route
    */
@@ -20,7 +29,7 @@ export class AppRoutingCache implements RouteReuseStrategy {
    * @param route
    */
   shouldAttach(route: ActivatedRouteSnapshot): boolean {
-    const key = this.getCurrentUrl(route);
+    const key = AppRoutingCache.getCurrentUrl(route);
     return !!route.routeConfig && !!AppRoutingCache.handles[key];
   }
 
@@ -39,7 +48,7 @@ export class AppRoutingCache implements RouteReuseStrategy {
    * @param handle
    */
   store(route: ActivatedRouteSnapshot, handle: DetachedRouteHandle | null): void {
-    const key = this.getCurrentUrl(route);
+    const key = AppRoutingCache.getCurrentUrl(route);
     AppRoutingCache.handles[key] = handle;
   }
 
@@ -51,17 +60,8 @@ export class AppRoutingCache implements RouteReuseStrategy {
     if (!route.routeConfig) {
       return null;
     } else {
-      const key = this.getCurrentUrl(route);
+      const key = AppRoutingCache.getCurrentUrl(route);
       return AppRoutingCache.handles[key];
     }
-  }
-
-  /**
-   * 计算url路径
-   * @param route
-   */
-  private getCurrentUrl(route: ActivatedRouteSnapshot) {
-    return route['_routerState'].url.replace(/\//g, '_')
-      + '_' + (route.routeConfig.loadChildren || route.routeConfig.component.toString().split('(')[0].split(' ')[1]);
   }
 }

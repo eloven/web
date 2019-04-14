@@ -4,9 +4,8 @@
 
 export const environment = {
   production: false,
-  config: {
-    API: 'http://localhost:3000/api/'
-  }
+  api: 'http://localhost:3000/api',
+  host: 'http://localhost:3000/',
 };
 
 /*

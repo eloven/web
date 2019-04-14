@@ -1,14 +1,14 @@
 <div class="inline-page">
   <div class="logo">
-    <h3 (click)="routerTo('index')">MaterialPro</h3>
+    <h3 (click)="routerTo('home/dashboard')">MaterialPro</h3>
   </div>
   <div class="menu" *ngFor="let menu of sideNavData; i as index;">
     <div [ngClass]="{'active': menu.isActive}">
       <button mat-button style="width: 100%" (click)="onClickMenu(menu)">
         <mat-icon style="margin-right: 10px">{{menu.icon}}</mat-icon>
-        <span>
+        <span style="margin-right: 50px">
           {{menu.text}}
-      </span>
+        </span>
       </button>
     </div>
     <div *ngIf="menu.isOpen">

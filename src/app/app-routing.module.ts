@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'index', component: BlankLayoutComponent, children: [
       {path: '', redirectTo: 'user', pathMatch: 'full'},
       {path: 'user', loadChildren: './pages/user/index#UserModule'},
-      {path: 'loading', loadChildren: './pages/loading/index#LoadingModule'}
+      {path: 'loading', loadChildren: './pages/landing/index#LandingModule'}
     ]},
   {path: '**', redirectTo: 'index', pathMatch: 'full'},
 ];

@@ -13,12 +13,7 @@
   <link href="./assets/fonts/g.css" rel="stylesheet">
   <link href="./assets/fonts/g-color.css" rel="stylesheet">
   <script type="text/javascript">
-    if (!window.fetch) {
-      dynamicLoadJs('./assets/js/promise-polyfills.js');
-      dynamicLoadJs('./assets/js/fetch.umd.js');
-    }
-
-    function dynamicLoadJs(url) {
+    window.lazyLoad = function (url) {
       var head = document.getElementsByTagName('head')[0];
       var script = document.createElement('script');
       script.type = 'text/javascript';
@@ -27,9 +22,7 @@
     }
   </script>
   <script type="text/javascript" src="./assets/js/js.cookie.js"></script>
-  <script type="text/javascript" src="./assets/js/g2.min.js"></script>
   <script type="text/javascript" src="./assets/js/shim.min.js"></script>
-  <script type="text/javascript" src="./assets/js/xlsx.full.min.js"></script>
 </head>
 <body>
   <!--[if lt IE 9]>

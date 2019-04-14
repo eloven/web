@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-info-detail',
   templateUrl: './info-detail.component.html',
@@ -10,6 +11,7 @@ export class InfoDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

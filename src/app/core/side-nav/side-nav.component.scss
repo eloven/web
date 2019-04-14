@@ -1,0 +1,26 @@
+.inline-page{
+  .logo{
+    height: 64px;
+    width: 100%;
+    background: #002140;
+    h3{
+      line-height: 64px;
+      text-align: center;
+    }
+  }
+  .menu{
+    display: flex;
+    flex-direction: column;
+    div{
+      width: 100%;
+      &.active{
+        background: #1890ff;
+      }
+    }
+    .sub-menu{
+      &.active{
+        background: #1890ff;
+      }
+    }
+  }
+}

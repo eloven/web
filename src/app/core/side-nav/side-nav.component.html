@@ -1,5 +1,25 @@
-<div>
-  <p>
-    side nav
-  </p>
+<div class="inline-page">
+  <div class="logo">
+    <h3 (click)="routerTo('index')">MaterialPro</h3>
+  </div>
+  <div class="menu" *ngFor="let menu of sideNavData; i as index;">
+    <div [ngClass]="{'active': menu.isActive}">
+      <button mat-button style="width: 100%" (click)="onClickMenu(menu)">
+        <mat-icon style="margin-right: 10px">{{menu.icon}}</mat-icon>
+        <span>
+          {{menu.text}}
+      </span>
+      </button>
+    </div>
+    <div *ngIf="menu.isOpen">
+      <div class="sub-menu" [ngClass]="{'active': subMenu.isActive}"
+           *ngFor="let subMenu of menu.children; y as index;">
+        <button mat-button style="width: 100%" (click)="selectSubMenu(subMenu)">
+      <span>
+          {{subMenu.text}}
+      </span>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

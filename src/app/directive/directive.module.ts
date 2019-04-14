@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RenderComponent } from './render/render.component';
 import { DirectiveRoutingModule } from './directive-routing.module';
+import { HtmlPipe } from '../utils/pipes/html.pipe';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [RenderComponent],
+  declarations: [
+    RenderComponent,
+    HtmlPipe,
+  ],
   imports: [
     CommonModule,
     DirectiveRoutingModule,

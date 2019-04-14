@@ -12,15 +12,10 @@
 // 自定义主题
 @import "./styles.theme.scss";
 
-
-html {
-  height: 100%;
-}
-
-body{
+html, body{
+  width: 100%;
   height: 100%;
   margin: 0;
-  position: relative;
 }
 
 /* Document scrollbar */
@@ -36,6 +31,11 @@ body{
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
+// 撑满flex容器
+.full-space{
+  flex: 1 1 auto;
+}
+
 /**
   clear float
  */
@@ -46,3 +46,13 @@ body{
   clear: both;
 }
 .clear {zoom: 1;} /* IE < 8 */
+
+.scroll-page{
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.inline-page{
+  width: 100%;
+  height: 100%;
+}

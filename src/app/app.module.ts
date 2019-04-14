@@ -4,31 +4,30 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './pages/home/home.component';
-import { TestComponent } from './pages/test/test.component';
 
-import { HtmlPipe } from './pipes/html.pipe';
 
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { RouteReuseStrategy } from '@angular/router';
 import { AppRoutingCache } from './app-routing-cache';
 import { CoreModule } from './core/core.module';
+import { HttpClientModule } from '@angular/common/http';
+import { LayoutComponent } from './pages/layout/layout.component';
+import { BlankLayoutComponent } from './pages/blank-layout/blank-layout.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    TestComponent,
-    HtmlPipe,
+    LayoutComponent,
+    BlankLayoutComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     CoreModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: RouteReuseStrategy, useClass: AppRoutingCache }
   ],
   bootstrap: [AppComponent]

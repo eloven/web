@@ -1,19 +1,28 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules, ExtraOptions } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { TestComponent } from './pages/test/test.component';
+import { LayoutComponent } from './pages/layout/layout.component';
+import { BlankLayoutComponent } from './pages/blank-layout/blank-layout.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
-  {path: 'test', component: TestComponent},
-  {path: 'material', loadChildren: './material/index#MaterialPagesModule'},
-  {path: 'directive', loadChildren: './directive/directive.module#DirectiveModule'},
-  {path: '**', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: LayoutComponent, children: [
+      {path: '', redirectTo: 'admin', pathMatch: 'full'},
+      {path: 'admin', loadChildren: './pages/admin/index#AdminModule'},
+      {path: 'dashboard', loadChildren: './pages/dashboard/index#DashboardModule'},
+      {path: 'material', loadChildren: './material/index#MaterialPagesModule'},
+      {path: 'directive', loadChildren: './directive/directive.module#DirectiveModule'},
+      ]},
+  {path: 'index', component: BlankLayoutComponent, children: [
+      {path: '', redirectTo: 'user', pathMatch: 'full'},
+      {path: 'user', loadChildren: './pages/user/index#UserModule'},
+      {path: 'loading', loadChildren: './pages/loading/index#LoadingModule'}
+    ]},
+  {path: '**', redirectTo: 'index', pathMatch: 'full'},
 ];
 
 const config: ExtraOptions = {
-  preloadingStrategy: PreloadAllModules,
+  useHash: false,
   scrollPositionRestoration: 'disabled',
   anchorScrolling: 'disabled'
 };

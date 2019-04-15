@@ -1,24 +1,32 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { HttpClientService } from '../../service/http-client.service';
 import { Router } from '@angular/router';
 import { ISideNavData, SIDE_NAV_DATA } from '../../config/mock-data';
+import { easeInOut } from '../../shared/animate/ease-in-out';
 
 
 @Component({
   selector: 'app-side-nav',
   templateUrl: './side-nav.component.html',
   styleUrls: ['./side-nav.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  animations: [easeInOut],
 })
 export class SideNavComponent implements OnInit {
 
-  sideNavData: ISideNavData[] = SIDE_NAV_DATA;
-  constructor(private http: HttpClientService, private router: Router) {}
 
-  ngOnInit() {
-    this.sideNavData[0].isActive = true;
+  @Input() isOpenSideNav: boolean;
+
+  sideNavData: ISideNavData[] = SIDE_NAV_DATA;
+
+  constructor(private http: HttpClientService, private router: Router) {
   }
 
+  ngOnInit() {
+  }
+  /**
+   * 主菜单控制
+   * @param menu
+   */
   onClickMenu(menu) {
     const next = !menu.isOpen;
     this.resetMenuData();
@@ -27,12 +35,30 @@ export class SideNavComponent implements OnInit {
     menu.isActive = true;
   }
 
-  selectSubMenu(sub) {
-    this.resetMenuData();
-    sub.isActive = true;
-    this.routerTo(sub.path);
+  /**
+   * 子菜单控制
+   * 打开侧边栏 / 关闭侧边栏
+   * @param sub
+   * @param menu
+   */
+  selectSubMenu(sub, menu?: ISideNavData) {
+    if (!this.isOpenSideNav) {
+      this.resetMenuData();
+      sub.isActive = true;
+      this.routerTo(sub.path);
+      menu.isOpen = false;
+      menu.isActive = true;
+    } else {
+      this.resetMenuData();
+      sub.isActive = true;
+      this.routerTo(sub.path);
+    }
   }
 
+  /**
+   * 导航
+   * @param p
+   */
   routerTo(p: string) {
     if (p === 'home/dashboard') {
       this.resetMenuData();
@@ -41,6 +67,9 @@ export class SideNavComponent implements OnInit {
     this.router.navigate([p]);
   }
 
+  /**
+   * 重置状态
+   */
   private resetMenuData() {
     this.sideNavData.forEach(el => {
       el.isActive = false;

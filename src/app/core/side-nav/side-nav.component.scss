@@ -1,8 +1,9 @@
+@import "../../styles/@color";
 .inline-page{
   .logo{
     height: 64px;
     width: 100%;
-    background: #002140;
+    background: #8643e1;
     h3{
       line-height: 64px;
       text-align: center;
@@ -11,15 +12,27 @@
   .menu{
     display: flex;
     flex-direction: column;
+    position: relative;
     div{
       width: 100%;
       &.active{
-        background: #1890ff;
+        background: rgba(153, 153, 153, 0.5);
       }
     }
     .sub-menu{
       &.active{
-        background: #1890ff;
+        background: rgba(153, 153, 153, 0.5);
+      }
+    }
+    .close-sub-menu{
+      position: absolute;
+      background: #8643e1;
+      left: 62px;
+      top: 2px;
+      width: 120px;
+      border-radius: 2px;
+      &.active{
+        background: rgba(153, 153, 153, 0.5);
       }
     }
   }

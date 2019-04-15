@@ -1,0 +1,51 @@
+.header-page{
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  color: rgba(0,0,0,.65);
+  position: relative;
+  .toggle{
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+  .control{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    padding: 0 25px;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    .search{
+      display: flex;
+      align-items: center;
+      .search-input{
+        height: 24px;
+        line-height: 1.0;
+        background: transparent;
+        padding-right: 0;
+        padding-left: 0;
+        outline: 0;
+        border: 0;
+        box-shadow: none!important;
+        border-bottom: 1px solid #cccccc;
+        margin: 0 15px;
+      }
+    }
+    .action{
+      height: 64px;
+      display: flex;
+      flex-direction: row;
+      div{
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+      }
+    }
+  }
+}

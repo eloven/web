@@ -1,10 +1,13 @@
 <div class="layout">
-  <div class="left">
-    <app-side-nav></app-side-nav>
+  <div class="left" *ngIf="isOpenSideNav">
+    <app-side-nav [isOpenSideNav]="isOpenSideNav"></app-side-nav>
+  </div>
+  <div class="closed" *ngIf="!isOpenSideNav">
+    <app-side-nav [isOpenSideNav]="isOpenSideNav"></app-side-nav>
   </div>
   <div class="right">
     <header>
-      <app-header></app-header>
+      <app-header [(isOpen)]="isOpenSideNav"></app-header>
     </header>
     <div>
       <router-outlet></router-outlet>

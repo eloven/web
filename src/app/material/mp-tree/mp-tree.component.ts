@@ -26,7 +26,6 @@ export interface FlatTreeNode {
   selector: 'app-mp-tree',
   templateUrl: './mp-tree.component.html',
   styleUrls: ['./mp-tree.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MpTreeComponent {
 

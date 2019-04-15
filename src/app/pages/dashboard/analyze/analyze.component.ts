@@ -14,9 +14,9 @@ export class AnalyzeComponent implements OnInit {
     // this.http.getConfigResponse('users').subscribe(res => {
     //   console.log(res.headers.keys());
     // });
-    this.http.getByParams('users', {name: 'jack'}).subscribe(res => {
-      console.log(res);
-    });
+    // this.http.getByParams('users', {name: 'jack'}).subscribe(res => {
+    //   console.log(res);
+    // });
     // this.http.postJson('users', {name: 'jack'}).subscribe(res => {
     //   console.log(res);
     // });

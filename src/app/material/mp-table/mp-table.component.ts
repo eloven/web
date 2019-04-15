@@ -6,7 +6,6 @@ import { MpTableDataSource } from './mp-table-datasource';
   selector: 'app-mp-table',
   templateUrl: './mp-table.component.html',
   styleUrls: ['./mp-table.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MpTableComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;

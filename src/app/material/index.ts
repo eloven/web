@@ -18,4 +18,5 @@ import { CommonModule } from '@angular/common';
     MaterialRoutingModule,
   ]
 })
-export class MaterialPagesModule { }
+export class MaterialPagesModule {
+}

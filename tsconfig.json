@@ -17,6 +17,20 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "mp-model": [
+        "dist/mp-model"
+      ],
+      "mp-model/*": [
+        "dist/mp-model/*"
+      ],
+      "mp-modal": [
+        "dist/mp-modal"
+      ],
+      "mp-modal/*": [
+        "dist/mp-modal/*"
+      ]
+    }
   }
 }

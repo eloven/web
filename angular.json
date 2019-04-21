@@ -154,6 +154,41 @@
           }
         }
       }
+    },
+    "mp-modal": {
+      "root": "projects/mp-modal",
+      "sourceRoot": "projects/mp-modal/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/mp-modal/tsconfig.lib.json",
+            "project": "projects/mp-modal/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mp-modal/src/test.ts",
+            "tsConfig": "projects/mp-modal/tsconfig.spec.json",
+            "karmaConfig": "projects/mp-modal/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mp-modal/tsconfig.lib.json",
+              "projects/mp-modal/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "material-pro"

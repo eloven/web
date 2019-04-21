@@ -14,7 +14,7 @@
         </span>
       </button>
     </div>
-<!--    展开模式子菜单-->
+    <!--    展开模式子菜单-->
     <div *ngIf="menu.isOpen && isOpenSideNav">
       <div class="sub-menu" [ngClass]="{'active': subMenu.isActive}"
            *ngFor="let subMenu of menu.children; y as index;">
@@ -25,7 +25,7 @@
         </button>
       </div>
     </div>
-<!--    关闭模式子菜单-->
+    <!--    关闭模式子菜单-->
     <div class="close-sub-menu" *ngIf="!isOpenSideNav">
       <div *ngIf="menu.isOpen" @easeInOut>
         <div [ngClass]="{'active': subMenu.isActive}"

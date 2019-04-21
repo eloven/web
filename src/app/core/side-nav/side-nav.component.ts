@@ -1,8 +1,8 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { HttpClientService } from '../../service/http-client.service';
-import { Router } from '@angular/router';
-import { ISideNavData, SIDE_NAV_DATA } from '../../config/mock-data';
-import { easeInOut } from '../../shared/animate/ease-in-out';
+import {Component, Input, OnInit} from '@angular/core';
+import {HttpClientService} from '../../service/http-client.service';
+import {Router} from '@angular/router';
+import {ISideNavData, SIDE_NAV_DATA} from '../../config/mock-data';
+import {easeInOut} from '../../animate/ease-in-out';
 
 
 @Component({
@@ -23,6 +23,7 @@ export class SideNavComponent implements OnInit {
 
   ngOnInit() {
   }
+
   /**
    * 主菜单控制
    * @param menu

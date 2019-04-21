@@ -18,7 +18,7 @@ export class Utils {
    * 懒加载第三方库
    * @param lib
    */
-  static lazyLoad(lib: ILibsConfig): void {
+  static lazyLoadJs(lib: ILibsConfig): void {
     if (!window[lib.name]) {
       window.lazyLoad('./assets/js/' + lib.path);
     }

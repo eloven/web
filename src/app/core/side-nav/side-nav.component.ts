@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewChild, ElementRef, OnDestroy} from '@angular/core';
 import {HttpClientService} from '../../service/http-client.service';
 import {Router} from '@angular/router';
 import {ISideNavData, SIDE_NAV_DATA} from '../../config/mock-data';
@@ -11,24 +11,38 @@ import {easeInOut} from '../../animate/ease-in-out';
   styleUrls: ['./side-nav.component.scss'],
   animations: [easeInOut],
 })
-export class SideNavComponent implements OnInit {
+export class SideNavComponent implements OnInit, OnDestroy {
+
+
 
 
   @Input() isOpenSideNav: boolean;
 
+  @ViewChild('sideNav') sideNav: ElementRef;
+
   sideNavData: ISideNavData[] = SIDE_NAV_DATA;
+
+  width: number;
 
   constructor(private http: HttpClientService, private router: Router) {
   }
 
   ngOnInit() {
+    document.addEventListener('click', this.handleClick.bind(this), false);
+    this.width = this.sideNav.nativeElement.offsetWidth;
+  }
+
+  ngOnDestroy(): void {
+    document.removeEventListener('click', this.handleClick);
   }
 
   /**
    * 主菜单控制
    * @param menu
    */
-  onClickMenu(menu) {
+  onClickMenu(e: MouseEvent, menu: ISideNavData) {
+    e.stopPropagation();
+    e.preventDefault();
     const next = !menu.isOpen;
     this.resetMenuData();
     this.sideNavData.forEach(el => el.isOpen = false);
@@ -42,7 +56,9 @@ export class SideNavComponent implements OnInit {
    * @param sub
    * @param menu
    */
-  selectSubMenu(sub, menu?: ISideNavData) {
+  selectSubMenu(e: MouseEvent, sub: ISideNavData, menu?: ISideNavData) {
+    e.stopPropagation();
+    e.preventDefault();
     if (!this.isOpenSideNav) {
       this.resetMenuData();
       sub.isActive = true;
@@ -78,5 +94,15 @@ export class SideNavComponent implements OnInit {
         item.isActive = false;
       });
     });
+  }
+
+  private handleClick(e: MouseEvent) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.clientX > this.width && !this.isOpenSideNav) {
+      this.sideNavData.forEach(el => {
+        el.isOpen = false;
+      });
+    }
   }
 }

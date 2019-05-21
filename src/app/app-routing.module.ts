@@ -11,7 +11,6 @@ const routes: Routes = [
       {path: 'admin', loadChildren: './pages/admin/index#AdminModule'},
       {path: 'dashboard', loadChildren: './pages/dashboard/index#DashboardModule'},
       {path: 'material', loadChildren: './material/index#MaterialPagesModule'},
-      {path: 'directive', loadChildren: './directive/directive.module#DirectiveModule'},
       ]},
   {path: 'index', component: BlankLayoutComponent, children: [
       {path: '', redirectTo: 'user', pathMatch: 'full'},

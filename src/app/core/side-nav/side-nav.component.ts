@@ -40,9 +40,7 @@ export class SideNavComponent implements OnInit, OnDestroy {
    * 主菜单控制
    * @param menu
    */
-  onClickMenu(e: MouseEvent, menu: ISideNavData) {
-    e.stopPropagation();
-    e.preventDefault();
+  onClickMenu(menu: ISideNavData) {
     const next = !menu.isOpen;
     this.resetMenuData();
     this.sideNavData.forEach(el => el.isOpen = false);

@@ -7,6 +7,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { loadSvgResources } from '../utils/svg.utils';
 import { AppMaterialModule } from '../shared/app.material.module';
 import { CommonModule } from '@angular/common';
+import { StopPropagationDirective } from '../directive/stop-propagation.directive';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { CommonModule } from '@angular/common';
     SideNavComponent,
     HeaderComponent,
     FooterComponent,
+    StopPropagationDirective,
     ],
   imports: [
     AppMaterialModule,

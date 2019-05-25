@@ -7,6 +7,7 @@
 # Only exists if Bazel was run
 /bazel-out
 nest-server/dist
+nest-server/node_modules
 nest-server/package-lock.json
 
 

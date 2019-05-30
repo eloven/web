@@ -16,7 +16,7 @@ import { StopPropagationDirective } from '../directive/stop-propagation.directiv
     HeaderComponent,
     FooterComponent,
     StopPropagationDirective,
-    ],
+  ],
   imports: [
     AppMaterialModule,
     CommonModule,
@@ -28,9 +28,7 @@ import { StopPropagationDirective } from '../directive/stop-propagation.directiv
   ]
 })
 export class CoreModule {
-  constructor(@Optional() @SkipSelf() parent: CoreModule,
-              iconRegistry: MatIconRegistry,
-              sanitizer: DomSanitizer) {
+  constructor(@Optional() @SkipSelf() parent: CoreModule, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     if (parent) {
       throw Error('模块已经存在, 不能再次加载！');
     }

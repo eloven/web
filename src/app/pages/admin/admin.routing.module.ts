@@ -21,7 +21,7 @@ import { UserSettingComponent } from './user-setting/user-setting.component';
 import { SearchListComponent } from './table-form/search-list/search-list.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'basic-form', pathMatch: 'full'},
+  {path: '', redirectTo: '400', pathMatch: 'full'},
   {path: 'basic-form', component: BasicFormComponent},
   {path: 'step-form', component: StepFormComponent},
   {path: 'reactive-form', component: ReactiveFormComponent},

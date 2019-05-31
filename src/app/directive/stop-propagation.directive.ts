@@ -1,11 +1,12 @@
-import { Directive, Output, EventEmitter, Renderer2, ElementRef } from '@angular/core';
+import { Directive, Output, EventEmitter, Renderer2, ElementRef, OnInit, OnDestroy } from '@angular/core';
 
 @Directive({
+// tslint:disable-next-line: directive-selector
   selector: '[click.stop]'
 })
-export class StopPropagationDirective {
+export class StopPropagationDirective implements OnInit, OnDestroy {
 
-  @Output("click.stop") stopPropEvent = new EventEmitter();
+  @Output('click.stop') stopPropEvent = new EventEmitter();
   unsubscribe: () => void;
 
   constructor(private renderer: Renderer2, private element: ElementRef) {

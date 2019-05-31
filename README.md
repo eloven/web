@@ -4,7 +4,7 @@ English | [简体中文](./README.zh-CN.md)
 
 <div align="center">
 
-simple and practical of Material UI
+simple and practical of Material
 
 [![Build status](https://ci.appveyor.com/api/projects/status/67fxu2by3ibvqtat/branch/master?svg=true)](https://github.com/guobin211/material-pro)
 [![Dependencies](https://img.shields.io/david/ant-design/ant-design-pro.svg)](https://github.com/guobin211/material-pro)

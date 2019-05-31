@@ -1,8 +1,8 @@
-import {Component, Input, OnInit, ViewChild, ElementRef, OnDestroy} from '@angular/core';
-import {HttpClientService} from '../../service/http-client.service';
-import {Router} from '@angular/router';
-import {ISideNavData, SIDE_NAV_DATA} from '../../config/mock-data';
-import {easeInOut} from '../../animate/ease-in-out';
+import { Component, Input, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
+import { HttpClientService } from '../../service/http-client.service';
+import { Router } from '@angular/router';
+import { ISideNavData, SIDE_NAV_DATA } from '../../config/mock-data';
+import { easeInOut } from '../../animate/ease-in-out';
 
 
 @Component({

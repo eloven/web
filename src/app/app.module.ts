@@ -13,7 +13,11 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { BlankLayoutComponent } from './pages/blank-layout/blank-layout.component';
 
 import { httpInterceptorProviders } from './service/http-interceptor';
-
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,10 @@ import { httpInterceptorProviders } from './service/http-interceptor';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AngularFireModule.initializeApp(environment.filebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule,
     CoreModule,
     HttpClientModule,
     AppRoutingModule,

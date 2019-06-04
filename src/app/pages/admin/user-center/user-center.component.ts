@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-user-center',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserCenterComponent implements OnInit {
 
-  constructor() { }
+  dataList$: Observable<any>;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

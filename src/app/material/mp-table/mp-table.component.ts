@@ -8,8 +8,8 @@ import { MpTableDataSource } from './mp-table-datasource';
   styleUrls: ['./mp-table.component.css'],
 })
 export class MpTableComponent implements OnInit {
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, {read: 'paginator', static: false}) paginator: MatPaginator;
+  @ViewChild(MatSort, {read: 'sort', static: false}) sort: MatSort;
   dataSource: MpTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */

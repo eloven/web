@@ -1,8 +1,9 @@
-import { Component, Input, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ElementRef, OnDestroy, AfterViewInit } from '@angular/core';
 import { HttpClientService } from '../../service/http-client.service';
 import { Router } from '@angular/router';
 import { ISideNavData, SIDE_NAV_DATA } from '../../config/mock-data';
 import { easeInOut } from '../../animate/ease-in-out';
+import { animate } from '@angular/animations';
 
 
 @Component({
@@ -11,14 +12,12 @@ import { easeInOut } from '../../animate/ease-in-out';
   styleUrls: ['./side-nav.component.scss'],
   animations: [easeInOut],
 })
-export class SideNavComponent implements OnInit, OnDestroy {
-
-
-
+export class SideNavComponent implements OnInit, AfterViewInit, OnDestroy {
 
   @Input() isOpenSideNav: boolean;
 
-  @ViewChild('sideNav') sideNav: ElementRef;
+  @ViewChild('sideNav', { static: true })
+  private sideNav: ElementRef;
 
   sideNavData: ISideNavData[] = SIDE_NAV_DATA;
 
@@ -27,9 +26,12 @@ export class SideNavComponent implements OnInit, OnDestroy {
   constructor(private http: HttpClientService, private router: Router) {
   }
 
+  ngAfterViewInit(): void {
+    this.width = this.sideNav.nativeElement.offsetWidth;
+  }
+
   ngOnInit() {
     document.addEventListener('click', this.handleClick.bind(this), false);
-    this.width = this.sideNav.nativeElement.offsetWidth;
   }
 
   ngOnDestroy(): void {

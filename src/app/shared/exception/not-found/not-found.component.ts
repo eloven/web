@@ -7,7 +7,7 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angula
 })
 export class NotFoundComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('canvas') dom: ElementRef;
+  @ViewChild('canvas', { static: true }) dom: ElementRef;
 
   private canvas: HTMLCanvasElement;
 

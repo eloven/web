@@ -11,7 +11,9 @@ nest-server/node_modules
 nest-server/package-lock.json
 .idea
 nest-server/.idea
-
+.vscode
+nest-server/node_modules
+client/node_modules
 # dependencies
 /node_modules
 package-lock.json

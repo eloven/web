@@ -1,0 +1,47 @@
+// p文本下划线
+.pretty-text-underline {
+  font-family: Arial, sans-serif;
+  display: inline;
+  font-size: 18px;
+  text-shadow: 1px 1px 0 #f5f6f9, -1px 1px 0 #f5f6f9, -1px -1px 0 #f5f6f9, 1px -1px 0 #f5f6f9;
+  background-image: linear-gradient(90deg, currentColor 100%, transparent 100%);
+  background-position: 0 0.98em;
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+}
+.pretty-text-underline::-moz-selection {
+  background-color: rgba(0, 150, 255, 0.3);
+  text-shadow: none;
+}
+.pretty-text-underline::selection {
+  background-color: rgba(0, 150, 255, 0.3);
+  text-shadow: none;
+}
+
+// p文本悬停下划线动画
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+// p文本禁用选择
+.unselectable {
+  user-select: none;
+}

@@ -1,0 +1,85 @@
+// 圆形
+.circle {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  background: #333;
+}
+
+/* Document scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+// 动态阴影
+.dynamic-shadow-parent {
+  position: relative;
+  z-index: 1;
+}
+.dynamic-shadow {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  background: linear-gradient(75deg, #6d78ff, #00ffb8);
+}
+.dynamic-shadow::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  top: 0.5rem;
+  filter: blur(0.4rem);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+// 溢出滚动渐变
+
+//<div class="overflow-scroll-gradient">
+//  <div class="overflow-scroll-gradient__scroller">
+//      Content to be scrolled
+//  </div>
+//</div>
+
+.overflow-scroll-gradient {
+  position: relative;
+}
+.overflow-scroll-gradient::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 240px;
+  height: 25px;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.001),
+      white
+  ); /* transparent keyword is broken in Safari */
+  pointer-events: none;
+}
+.overflow-scroll-gradient__scroller {
+  overflow-y: scroll;
+  background: white;
+  width: 240px;
+  height: 200px;
+  padding: 15px 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+// 三角形
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 20px solid #333;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}

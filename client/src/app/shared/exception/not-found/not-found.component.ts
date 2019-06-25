@@ -28,6 +28,9 @@ export class NotFoundComponent implements OnInit, AfterViewInit {
     });
   }
 
+  send() {
+  }
+
   private initProps() {
     this.canvas = this.dom.nativeElement as HTMLCanvasElement;
     this.context = this.canvas.getContext('2d');

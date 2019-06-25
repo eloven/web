@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class MpModalComponent implements OnInit {
-
+  show = false;
   constructor() { }
 
   ngOnInit() {

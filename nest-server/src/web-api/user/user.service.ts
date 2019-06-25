@@ -8,8 +8,6 @@ export class UserService {
   }
 
   async userList() {
-    setTimeout(() => {
-      return this.default;
-    }, 500);
+    return this.default;
   }
 }

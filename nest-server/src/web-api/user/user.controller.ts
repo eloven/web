@@ -7,7 +7,7 @@ export class UserController {
   constructor(private readonly userService: UserService) {
   }
 
-  @Get('list')
+  @Get()
   async getUserList(@Res() response: Response) {
     const users = await this.userService.userList();
     response.status(HttpStatus.OK).json(users);

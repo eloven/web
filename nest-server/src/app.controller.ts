@@ -16,14 +16,9 @@ import { FileFieldsInterceptor, FileInterceptor, FilesInterceptor } from '@nestj
 import { IUploadFile } from './config/IUploadFile';
 import { saveFile, saveFiles } from './shared/utils/save';
 
-@Controller('/')
+@Controller('root')
 export class AppController {
   constructor(private readonly appService: AppService) {}
-
-  @Get('hello')
-  getHello(): string {
-    return this.appService.getHello();
-  }
 
   @Post()
   addData(@Body() body: any, @Res() response: Response) {

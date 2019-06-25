@@ -10,7 +10,7 @@ import { RolesGuard } from './shared/guards/roles.guard';
   controllers: [AppController],
   providers: [
     { provide: APP_GUARD, useClass: RolesGuard },
-    AppService,
+    AppService
   ],
 })
 export class AppModule {

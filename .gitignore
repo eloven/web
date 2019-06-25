@@ -17,6 +17,7 @@ client/node_modules
 # dependencies
 /node_modules
 package-lock.json
+nest-server/static
 
 # profiling files
 chrome-profiler-events.json

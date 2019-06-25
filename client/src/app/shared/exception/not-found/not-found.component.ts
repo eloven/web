@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { NestSocketService } from '../../../service/nest.socket.service';
 
 @Component({
   selector: 'app-not-found',
@@ -14,7 +15,7 @@ export class NotFoundComponent implements OnInit, AfterViewInit {
   private context: CanvasRenderingContext2D;
 
 
-  constructor() { }
+  constructor(private ws: NestSocketService) { }
 
   ngOnInit(): void {
   }
@@ -29,8 +30,12 @@ export class NotFoundComponent implements OnInit, AfterViewInit {
   }
 
   send() {
+    this.ws.send('angular socket');
   }
 
+  close() {
+    this.ws.close();
+  }
   private initProps() {
     this.canvas = this.dom.nativeElement as HTMLCanvasElement;
     this.context = this.canvas.getContext('2d');

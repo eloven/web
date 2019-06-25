@@ -3,8 +3,12 @@
  *
  * @author GuoBin on
  */
-import * as ws from 'ws';
+import { SocketService } from './socket.service';
 
-export class WebSocketServer {
-  constructor() {}
+export const sockets = new Map();
+
+export async function startWebSocket() {
+  const ws = new SocketService();
+  sockets.set('name', ws);
+  console.log('ws://127.0.0.1:12011');
 }

@@ -18,6 +18,15 @@ export class NestSocketService {
   private bindEvents() {
     this.ws.onopen = () => {
       console.log('open');
+      this.ws.send('angular');
     };
+  }
+
+  send(data: string) {
+    this.ws.send(data);
+  }
+
+  close() {
+    this.ws.close();
   }
 }

@@ -5,7 +5,8 @@ import { LogService } from './log.service';
 import * as helmet from 'helmet';
 import * as csurf from 'csurf';
 import * as compression from 'compression';
-import { WsAdapter } from './web-socket/WsAdapter';
+import { startWebSocket } from './web-socket/start';
+
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
@@ -18,7 +19,7 @@ async function bootstrap() {
   // app.use(csurf());
   // 压缩
   app.use(compression());
-  app.useWebSocketAdapter(new WsAdapter(app).create(12011));
+  await startWebSocket();
   await app.listen(Port.http);
 }
 bootstrap().then(() => {

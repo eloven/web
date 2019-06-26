@@ -4,7 +4,7 @@
  * @author GuoBin on
  */
 
-export const FILR_DIR_PATH = '/Users/guobin/vscode/material-pro/nest-server/static';
+export const FILE_DIR_PATH = '/Users/guobin/vscode/material-pro/nest-server/static';
 
 export interface IUploadFile {
   /**

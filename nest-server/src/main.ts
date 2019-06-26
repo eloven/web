@@ -1,16 +1,15 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { Port } from './config/port';
-import { LogService } from './log.service';
 import * as helmet from 'helmet';
 import * as csurf from 'csurf';
 import * as compression from 'compression';
+import { join } from 'path';
 import { startWebSocket } from './web-socket/start';
 
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, {
-    logger: new LogService(),
+  const app: any = await NestFactory.create(AppModule, {
     cors: true
   });
   // 通过适当地设置 HTTP 头，Helmet 可以帮助保护您的应用免受一些众所周知的 Web 漏洞的影响。
@@ -19,6 +18,7 @@ async function bootstrap() {
   // app.use(csurf());
   // 压缩
   app.use(compression());
+  app.useStaticAssets(join(__dirname, '..', 'public'));
   await startWebSocket();
   await app.listen(Port.http);
 }

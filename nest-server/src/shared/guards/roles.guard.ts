@@ -17,7 +17,6 @@ export class RolesGuard implements CanActivate {
   }
 
   private validateRequest(request: Request): boolean {
-    console.log(request.headers.cookie);
     return request.headers.cookie.includes('155');
   }
 

@@ -4,6 +4,7 @@
  * @author GuoBin on
  */
 import * as ws from 'ws';
+import json5 = require('json5');
 
 export class SocketService {
 
@@ -13,25 +14,35 @@ export class SocketService {
   constructor() {
     this.initWs();
     this.ws.on('connection', (socket) => {
-        console.log('connection');
+        this.publish({type: 'text', data: '初次连接上'});
         socket.on('message', (coming) => {
-          console.log(coming);
-          this.publish(coming);
+          this.handleComing(coming);
         });
-        socket.on('close', (client) => {
-          console.log('close');
-          console.log(client);
+        socket.on('close', (closeCode) => {
+          console.log(closeCode);
         });
 
     });
   }
 
+  /**
+   * 推送消息
+   * @param data
+   */
   publish(data: any) {
     this.ws.clients.forEach(client => {
-      if (client.readyState === WebSocket.OPEN) {
-        client.send(data);
+      if (client.OPEN) {
+        client.send(JSON.stringify(data));
       }
     });
+  }
+
+  /**
+   * 处理接收消息
+   * @param coming
+   */
+  private handleComing(coming: any) {
+
   }
 
   private initWs() {

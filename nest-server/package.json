@@ -4,6 +4,9 @@
   "description": "",
   "author": "",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/guobin211/material-pro"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\"",
@@ -22,19 +25,24 @@
   "dependencies": {
     "@nestjs/common": "^6.0.0",
     "@nestjs/core": "^6.0.0",
+    "@nestjs/mongoose": "^6.1.2",
     "@nestjs/platform-express": "^6.0.0",
     "@nestjs/platform-ws": "^6.3.2",
+    "@nestjs/websockets": "^6.0.0",
     "async": "^3.0.1",
+    "class-validator": "^0.9.1",
     "compression": "^1.7.4",
     "csurf": "^1.10.0",
     "helmet": "^3.18.0",
     "json5": "^2.1.0",
     "lodash": "4.17.11",
     "mime-types": "^2.1.24",
+    "mongoose": "^5.6.1",
     "reflect-metadata": "^0.1.12",
     "request": "^2.88.0",
     "rimraf": "^2.6.2",
     "rxjs": "^6.3.3",
+    "webrtc-adapter": "^7.2.4",
     "ws": "7.0.1"
   },
   "devDependencies": {

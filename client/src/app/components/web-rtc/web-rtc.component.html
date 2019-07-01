@@ -2,14 +2,15 @@
   <h2>WebRTC</h2>
   <div>
     <button mat-flat-button color="primary" (click)="openCamera()">打开摄像头</button>
-    <button mat-flat-button color="primary">关闭摄像头</button>
-    <button mat-flat-button color="primary">开始录像</button>
-    <button mat-flat-button color="primary">结束录像</button>
-    <button mat-flat-button color="primary">连接服务器</button>
+    <button mat-flat-button color="primary" (click)="closeCamera()">关闭摄像头</button>
+    <button mat-flat-button color="primary" (click)="recordVideo()">开始录像</button>
+    <button mat-flat-button color="primary" (click)="closeRecord()">结束录像</button>
+    <button mat-flat-button color="primary" (click)="onDownload()">下载视频</button>
+    <button mat-flat-button color="primary" (click)="connectServer()">发送到服务器</button>
   </div>
   <mat-grid-list rowHeight="200px" cols="2" class="video-warp">
     <mat-grid-tile>
-      <video #RtcVideo></video>
+      <video #RtcVideo muted controls></video>
     </mat-grid-tile>
     <mat-grid-tile>
       2

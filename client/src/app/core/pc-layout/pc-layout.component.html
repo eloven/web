@@ -1,0 +1,14 @@
+<div class="pc-desk">
+  <div class="left-nav">
+    <ul>
+      <li *ngFor="let route of routerList">
+        <button [routerLink]="route.path" color="primary" mat-flat-button >
+          {{route.text}}
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="right-router">
+    <router-outlet></router-outlet>
+  </div>
+</div>

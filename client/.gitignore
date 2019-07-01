@@ -6,25 +6,16 @@
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
-nest-server/dist
-nest-server/node_modules
-nest-server/package-lock.json
-.idea
-nest-server/.idea
-.vscode
-nest-server/node_modules
-client/node_modules
+
 # dependencies
 /node_modules
-package-lock.json
-nest-server/static
 
 # profiling files
 chrome-profiler-events.json
 speed-measure-plugin.json
 
 # IDEs and editors
-.idea
+/.idea
 .project
 .classpath
 .c9/
@@ -53,13 +44,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-*.iml
-nest-server/.idea/workspace.xml
-dist
-nest-server/dist
-nest-server/public
-nest-server/static
-nest-server/.idea
-.sass-cache
-.idea
-.vscode

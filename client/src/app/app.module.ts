@@ -4,42 +4,26 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { RouteReuseStrategy } from '@angular/router';
-import { AppRoutingCache } from './app-routing-cache';
 import { CoreModule } from './core/core.module';
-import { HttpClientModule } from '@angular/common/http';
-import { LayoutComponent } from './pages/layout/layout.component';
-import { BlankLayoutComponent } from './pages/blank-layout/blank-layout.component';
-
-import { httpInterceptorProviders } from './service/http-interceptor';
-import { AngularFireModule } from '@angular/fire';
-import { environment } from 'src/environments/environment';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+import { PcLayoutComponent } from './core/pc-layout/pc-layout.component';
+import { MatButtonModule, MatGridListModule } from '@angular/material';
+import { WebRtcComponent } from './components/web-rtc/web-rtc.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent,
-    BlankLayoutComponent
+    PcLayoutComponent,
+    WebRtcComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AngularFireModule.initializeApp(environment.filebase),
-    AngularFirestoreModule,
-    AngularFireAuthModule,
-    AngularFireStorageModule,
-    CoreModule,
-    HttpClientModule,
+    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CoreModule,
+    MatButtonModule,
+    MatGridListModule
   ],
-  providers: [
-    httpInterceptorProviders,
-    { provide: RouteReuseStrategy, useClass: AppRoutingCache },
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

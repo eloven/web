@@ -4,6 +4,6 @@
  * @author GuoBin on 2019-07-01
  */
 
-export class Queue {
-
+export class Queue<T> {
+  constructor() {}
 }

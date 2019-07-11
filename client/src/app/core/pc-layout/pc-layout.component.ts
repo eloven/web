@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PcLayoutComponent implements OnInit {
 
   routerList = [
-    {path: 'home', text: 'Home模块'},
+    {path: 'home', text: 'Home'},
     {path: 'rtc', text: 'WebRtc'},
   ];
   constructor() { }

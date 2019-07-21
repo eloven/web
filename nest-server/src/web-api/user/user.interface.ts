@@ -3,8 +3,9 @@
  *
  * @author GuoBin on
  */
+import { Mongos } from 'mongodb';
 
-export interface UserInterface {
+export interface UserInterface extends Mongos {
   name: string;
   age: number;
   email?: string;

@@ -9,7 +9,11 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class LoginGuard implements CanActivate {
   canActivate(context: ExecutionContext): boolean | Promise<boolean> | Observable<boolean> {
-    return undefined;
+    const request = context.switchToHttp().getRequest();
+    return this.validateRequest(request);
   }
 
+  private validateRequest(request: any) {
+     return !!request.headers.token;
+  }
 }

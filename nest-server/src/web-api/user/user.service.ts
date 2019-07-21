@@ -7,7 +7,11 @@ import { UserInterface } from './user.interface';
 @Injectable()
 export class UserService {
 
-  constructor(@InjectModel('User') private readonly userModel: Model<UserInterface>) {
+  constructor(@InjectModel('User') private readonly userModel: Model<any>) {
+  }
+
+  async pageList() {
+    const total = await this.userModel.countDocuments();
   }
 
   async create(userData: UserInterface) {

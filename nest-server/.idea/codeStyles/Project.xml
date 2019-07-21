@@ -2,9 +2,8 @@
   <code_scheme name="Project" version="173">
     <option name="AUTODETECT_INDENTS" value="false" />
     <option name="RIGHT_MARGIN" value="110" />
-    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="true" />
     <option name="SOFT_MARGINS" value="110" />
-    <JSCodeStyleSettings version="0">
+    <JSCodeStyleSettings version="1">
       <option name="FORCE_SEMICOLON_STYLE" value="true" />
       <option name="SPACE_BEFORE_FUNCTION_LEFT_PARENTH" value="false" />
       <option name="USE_DOUBLE_QUOTES" value="false" />
@@ -13,7 +12,7 @@
       <option name="SPACES_WITHIN_OBJECT_LITERAL_BRACES" value="true" />
       <option name="SPACES_WITHIN_IMPORTS" value="true" />
     </JSCodeStyleSettings>
-    <TypeScriptCodeStyleSettings version="0">
+    <TypeScriptCodeStyleSettings version="1">
       <option name="FORCE_SEMICOLON_STYLE" value="true" />
       <option name="SPACE_BEFORE_FUNCTION_LEFT_PARENTH" value="false" />
       <option name="USE_DOUBLE_QUOTES" value="false" />
@@ -48,7 +47,7 @@
     </codeStyleSettings>
     <codeStyleSettings language="JavaScript">
       <option name="KEEP_BLANK_LINES_IN_CODE" value="0" />
-      <option name="SOFT_MARGINS" value="80" />
+      <option name="SOFT_MARGINS" value="110" />
       <indentOptions>
         <option name="INDENT_SIZE" value="2" />
         <option name="CONTINUATION_INDENT_SIZE" value="2" />
@@ -87,7 +86,7 @@
       <option name="DOWHILE_BRACE_FORCE" value="3" />
       <option name="WHILE_BRACE_FORCE" value="3" />
       <option name="FOR_BRACE_FORCE" value="3" />
-      <option name="SOFT_MARGINS" value="80" />
+      <option name="SOFT_MARGINS" value="110" />
       <indentOptions>
         <option name="INDENT_SIZE" value="2" />
         <option name="CONTINUATION_INDENT_SIZE" value="2" />

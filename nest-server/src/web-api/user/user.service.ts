@@ -17,7 +17,7 @@ export class UserService {
   async create(userData: UserInterface) {
     const res = await this.findByName(userData.name);
     if (res) {
-      throw new HttpException('user is saved', HttpStatus.BAD_REQUEST);
+      throw new HttpException('user saved', HttpStatus.BAD_REQUEST);
     } else {
       userData.createdAt = new Date();
       const createdUser = new this.userModel(userData);
@@ -26,10 +26,10 @@ export class UserService {
   }
 
   async findByName(name: string) {
-    return await this.userModel.findOne({name});
+    return this.userModel.findOne({ name });
   }
 
   async updateByName(userData: UserInterface) {
-    return await this.userModel.findOneAndUpdate({name: userData.name}, userData);
+    return this.userModel.findOneAndUpdate({name: userData.name}, userData);
   }
 }

@@ -17,6 +17,6 @@ export class RolesGuard implements CanActivate {
   }
 
   private validateRequest(request: Request): boolean {
-    return !!request.headers.token;
+    return request.headers.token !== null;
   }
 }

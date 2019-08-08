@@ -14,6 +14,6 @@ export class LoginGuard implements CanActivate {
   }
 
   private validateRequest(request: any) {
-     return !!request.headers.token;
+     return request.headers.token !== null;
   }
 }

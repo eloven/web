@@ -22,11 +22,14 @@ export class AppController {
   }
 
   @Post()
-  addData(@Body() body: any, @Res() response: Response) {
+  addData(@Headers() headers, @Body() body: any, @Res() response: Response) {
+    // @ts-ignore
+    const token = headers.token;
     const time = new Date().toLocaleDateString();
     const res = {
       date: time,
       update: body,
+      token
     };
     response.status(HttpStatus.OK).json(res);
   }

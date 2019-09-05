@@ -29,7 +29,7 @@ export class AppController {
     const res = {
       date: time,
       update: body,
-      token
+      token,
     };
     response.status(HttpStatus.OK).json(res);
   }

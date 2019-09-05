@@ -7,10 +7,9 @@ import * as compression from 'compression';
 import { join } from 'path';
 import { startWebSocket } from './web-socket/start';
 
-
 async function bootstrap() {
   const app: any = await NestFactory.create(AppModule, {
-    cors: true
+    cors: true,
   });
   // 通过适当地设置 HTTP 头，Helmet 可以帮助保护您的应用免受一些众所周知的 Web 漏洞的影响。
   app.use(helmet());

@@ -1,5 +1,11 @@
 {
   "language": "ts",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "src",
+  "projects": {
+    "uuid": {
+      "root": "libs/uuid",
+      "sourceRoot": "libs/uuid/src"
+    }
+  }
 }

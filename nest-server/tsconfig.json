@@ -5,11 +5,28 @@
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es6",
+    "target": "es2017",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "@app/user": [
+        "libs/user/src"
+      ],
+      "@app/user/*": [
+        "libs/user/src/*"
+      ],
+      "@app/uuid": [
+        "libs/uuid/src"
+      ],
+      "@app/uuid/*": [
+        "libs/uuid/src/*"
+      ]
+    }
   },
-  "exclude": ["node_modules", "static", "public"]
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

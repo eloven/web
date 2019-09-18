@@ -26,6 +26,7 @@
     "@nestjs/typeorm": "^6.1.3",
     "@nestjs/websockets": "^6.6.7",
     "@types/socket.io": "^2.1.2",
+    "class-validator": "^0.10.0",
     "mysql": "^2.17.1",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",

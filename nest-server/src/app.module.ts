@@ -1,12 +1,17 @@
 import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UserController } from './module/user/user.controller';
-import { UserGateway } from './module/user/user.gateway';
-import { UserModule } from './module/user/user.module';
+import { UserController } from './user-module/user.controller';
+import { UserGateway } from './user-module/user.gateway';
+import { UserModule } from './user-module/user.module';
+import { MYSQL_OPTHION } from './config/config';
 
 @Module({
-  imports: [UserModule],
+  imports: [
+    TypeOrmModule.forRoot(MYSQL_OPTHION),
+    UserModule,
+  ],
   controllers: [AppController, UserController],
   providers: [AppService, UserGateway],
 })

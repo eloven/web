@@ -16,7 +16,7 @@ Material组件的使用
 
 ```bash
    
-   client   // angular客户端
+   ng-client   // angular客户端
    
    nest-server  // nest.js node 服务端
   

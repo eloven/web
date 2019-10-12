@@ -9,11 +9,14 @@ export class BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({
+    type: 'date',
+  })
   @IsDate()
   createdAt: string;
 
-  @Column()
-  @IsDate()
+  @Column({
+    default: new Date(),
+  })
   updateAt: string;
 }

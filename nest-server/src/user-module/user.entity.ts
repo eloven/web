@@ -1,45 +1,59 @@
 import { Column, Entity } from 'typeorm';
 import { BaseEntity } from '../core/base-entity';
-import {  IsEmail } from 'class-validator';
+import { IsEmail } from 'class-validator';
 
 /**
  * 用户模型
  */
 @Entity()
 export class UserEntity extends BaseEntity {
+  @Column({
+    name: 'username',
+    type: 'char',
+    length: 100,
+  })
+  username: string;
 
   @Column({
     length: 100,
+  })
+  password: string;
+
+  @Column({
+    length: 100,
+    nullable: true,
   })
   nickName: string;
 
   @Column({
     length: 100,
+    nullable: true,
   })
   realName: string;
 
   @Column({
-    length: 100,
+    nullable: true,
   })
-  username: string;
-
-  @Column()
-  password: string;
-
-  @Column()
   sex: number;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   identityCard: string;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   age: number;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   phone: string;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   @IsEmail()
   email: string;
-
 }

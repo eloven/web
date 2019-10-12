@@ -7,6 +7,6 @@ export const MYSQL_OPTHION: TypeOrmModuleOptions = {
   username: 'root',
   password: 'admin888',
   database: 'nest_server',
-  entities: [__dirname + '/**/*.entity{.ts,.js}'],
+  entities: [__dirname + '/src/**/*.entity{.ts,.js}'],
   synchronize: true,
 };

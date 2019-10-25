@@ -6,10 +6,7 @@ import { UserModule } from './user-module/user.module';
 import { MYSQL_OPTHION } from './config/config';
 
 @Module({
-  imports: [
-    TypeOrmModule.forRoot(MYSQL_OPTHION),
-    UserModule,
-  ],
+  imports: [TypeOrmModule.forRoot(MYSQL_OPTHION), UserModule],
   controllers: [AppController],
   providers: [AppService],
 })

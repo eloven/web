@@ -1,7 +1,7 @@
 import { ResponseCode } from '../config/ResponseCode';
 
-export class Resp<T> {
+export class Resp {
   code: ResponseCode;
-  data: T | object;
+  data: object;
   message: string;
 }

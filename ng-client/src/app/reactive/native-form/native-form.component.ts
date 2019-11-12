@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { HttpService } from '../../service/http.service'
 
 @Component({
   selector: 'app-native-form',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./native-form.component.scss']
 })
 export class NativeFormComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private http: HttpService) {
   }
 
+  ngOnInit() {
+    this.http.get('/data', {}).subscribe(res => {
+        console.log(res)
+      }, error => {
+        console.log(error)
+      },
+      () => {
+        console.log('complete')
+      }
+    )
+  }
 }

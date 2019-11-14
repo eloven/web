@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { HttpService } from '../../http/http.service'
+import { HttpService } from '../../service/http.service'
 
 @Component({
   selector: 'app-native-form',

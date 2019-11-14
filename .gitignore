@@ -8,15 +8,13 @@
 /bazel-out
 nest-server/dist
 nest-server/node_modules
-nest-server/package-lock.json
-.idea
+
 nest-server/.idea
-.vscode
 nest-server/node_modules
 client/node_modules
+
 # dependencies
-/node_modules
-package-lock.json
+node_modules
 nest-server/static
 
 # profiling files
@@ -25,6 +23,7 @@ speed-measure-plugin.json
 
 # IDEs and editors
 .idea
+.vscode
 .project
 .classpath
 .c9/
@@ -61,6 +60,7 @@ nest-server/public
 nest-server/static
 nest-server/.idea
 .sass-cache
-.idea
-.vscode
 temp
+example/**/node_modules
+example/**/dist
+

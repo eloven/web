@@ -17,9 +17,11 @@ Simple Material and Nest.js
 
 ```bash
    
-   client   // angular web
+   ng-client   // angular web
    
    nest-server  // nest.js node server
+
+   example     // angular basic
   
 ```
 
@@ -32,7 +34,7 @@ Simple Material and Nest.js
 
    git clone
 
-   cd client
+   cd ng-client
 
    npm install
 
@@ -46,12 +48,12 @@ Simple Material and Nest.js
 
 ```
 
-### about client
+### about ng-client
 
 ```
-   script   // auto build script 
-   projects   // angular ui lib
-   src      // angular app
+   script      // build script 
+   projects    // angular libs
+   src         // angular app
 
 ```
 

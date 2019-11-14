@@ -4,16 +4,14 @@ English | [简体中文](./README.zh-CN.md)
 
 <div align="center">
 
-Simple Material and Nest.js
-
-[![Build status](https://ci.appveyor.com/api/projects/status/67fxu2by3ibvqtat/branch/master?svg=true)](https://github.com/guobin211/material-pro)
-[![Dependencies](https://img.shields.io/david/ant-design/ant-design-pro.svg)](https://github.com/guobin211/material-pro)
-[![DevDependencies](https://img.shields.io/david/dev/ant-design/ant-design-pro.svg)](https://github.com/guobin211/material-pro)
+Angular Material and NestJS
 
 </div>
 
+[Material Pro](https://guobin211.github.io/material-pro/)
 
-### Main
+
+#### projects
 
 ```bash
    
@@ -25,7 +23,7 @@ Simple Material and Nest.js
   
 ```
 
-### dev
+#### develope
 
 > client port:4200
 > server port:9001
@@ -48,7 +46,7 @@ Simple Material and Nest.js
 
 ```
 
-### about ng-client
+#### about ng-client
 
 ```
    script      // build script 
@@ -58,14 +56,11 @@ Simple Material and Nest.js
 ```
 
 
-### about nest-server
+#### about nest-server
 
 ```
    src
-      static
-      video-stream
-      web-api
-      web-file
-      web-socket
-   
+      config
+      core
+
 ```

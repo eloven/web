@@ -4,25 +4,25 @@
 
 <div align="center">
 
-Material组件的使用
-
-[![Build status](https://ci.appveyor.com/api/projects/status/67fxu2by3ibvqtat/branch/master?svg=true)](https://github.com/guobin211/material-pro)
-[![Dependencies](https://img.shields.io/david/ant-design/ant-design-pro.svg)](https://github.com/guobin211/material-pro)
-[![DevDependencies](https://img.shields.io/david/dev/ant-design/ant-design-pro.svg)](https://github.com/guobin211/material-pro)
+Angular Material and NestJS
 
 </div>
 
-### 主要模块
+[Material Pro](https://guobin211.github.io/material-pro/)
+
+#### 项目列表
 
 ```bash
    
-   ng-client   // angular客户端
+   ng-client   // angular web
    
-   nest-server  // nest.js node 服务端
+   nest-server  // nest.js node server
+
+   example     // angular basic
   
 ```
 
-### dev
+#### develope
 
 > client port:4200
 > server port:9001
@@ -31,7 +31,7 @@ Material组件的使用
 
    git clone
 
-   cd client
+   cd ng-client
 
    npm install
 
@@ -45,24 +45,22 @@ Material组件的使用
 
 ```
 
-### about client
+#### about ng-client
 
 ```
-   script   // 构建脚本 
-   projects   // 由sdk开发的ui库
-   src      // app目录
+   script      // build script 
+   projects    // angular libs
+   src         // angular app
 
 ```
 
 
-### about nest-server
+#### about nest-server
 
 ```
    src
-      static   // 静态资源
-      video-stream   // 流媒体
-      web-api  // rest-api
-      web-file // 文件服务器
-      web-socket  // socket
-   
+      config
+      core
+
 ```
+

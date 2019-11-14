@@ -30,6 +30,6 @@ for (let i = 0; i < libs.length; i++) {
     args += `ng build ${libs[i]}`
   }
 }
-project.scripts.libs = args
+// project.scripts.libs = args
 
 // fs.writeFileSync(path.resolve(__dirname, '..', 'package.json'), JSON.stringify(project));

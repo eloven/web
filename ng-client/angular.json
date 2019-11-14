@@ -124,6 +124,12 @@
               "devServerTarget": "ng-client:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://guobin211.github.io/material-pro/"
+          }
         }
       }
     },

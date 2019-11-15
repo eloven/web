@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core'
+import { environment } from 'src/environments/environment'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  ngOnInit(): void {
+    console.log(environment)
+  }
 }

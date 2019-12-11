@@ -1,12 +1,7 @@
-import { NgModule } from '@angular/core';
-import { UuidComponent } from './uuid.component';
-
-
+import { NgModule } from '@angular/core'
+import { UuidService } from './uuid.service'
 
 @NgModule({
-  declarations: [UuidComponent],
-  imports: [
-  ],
-  exports: [UuidComponent]
+  providers: [UuidService]
 })
-export class UuidModule { }
+export class UuidModule {}

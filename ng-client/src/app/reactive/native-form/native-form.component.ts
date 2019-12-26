@@ -10,14 +10,16 @@ export class NativeFormComponent implements OnInit {
   constructor(private http: HttpService) {}
 
   ngOnInit() {
-    // this.http.get('/data', {}).subscribe(res => {
-    //     console.log(res)
-    //   }, error => {
-    //     console.log(error)
-    //   },
-    //   () => {
-    //     console.log('complete')
-    //   }
-    // )
+    this.http.get('/data', {}).subscribe(
+      res => {
+        console.log(res)
+      },
+      error => {
+        console.log(error)
+      },
+      () => {
+        console.log('complete')
+      }
+    )
   }
 }

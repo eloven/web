@@ -1,1 +1,19 @@
-<p>header works!</p>
+<div class="header">
+  <div class="header-left">
+    <span class="pointer">NG-Client</span>
+  </div>
+  <div class="header-content">
+    <div>
+      <div *ngFor="let router of routerLinkList" class="list-item">
+        <span class="pointer" (click)="navToPath(router.path)">
+          {{ router.text }}
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="header-right">
+    <span class="pointer">Git-Hub</span>
+    <span class="pointer">Email</span>
+    <span class="pointer">Twiter</span>
+  </div>
+</div>

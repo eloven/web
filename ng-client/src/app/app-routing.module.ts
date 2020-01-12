@@ -1,21 +1,20 @@
 import { NgModule } from '@angular/core'
-import { Routes, RouterModule } from '@angular/router'
-import { LoginComponent } from './layout/login/login.component'
-import { LoginGuard } from './guard/login.guard'
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router'
+import { LoginComponent } from './core/login/login.component'
 
 const routes: Routes = [
-  { path: '', redirectTo: 'reactive', pathMatch: 'full' },
-  {
-    path: 'reactive',
-    loadChildren: () => import('./reactive').then(m => m.ReactiveModule),
-    canLoad: [LoginGuard]
-  },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'form', loadChildren: () => import('./pages/form/form.module').then(m => m.FormModule) },
+  {
+    path: 'table',
+    loadChildren: () => import('./pages/table/table.module').then(m => m.TableModule)
+  },
   { path: '**', redirectTo: 'login' }
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

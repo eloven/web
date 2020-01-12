@@ -1,19 +1,30 @@
 <div class="header">
   <div class="header-left">
-    <span class="pointer">NG-Client</span>
+    <span class="pointer">MaterialPro</span>
   </div>
   <div class="header-content">
     <div>
-      <div *ngFor="let router of routerLinkList" class="list-item">
-        <span class="pointer" (click)="navToPath(router.path)">
+      <div
+        *ngFor="let router of routerLinkList; let i = index"
+        class="list-item"
+        [ngClass]="{ active: i === activeIndex }"
+        (click)="navToPath(router.path, i)"
+      >
+        <span class="pointer">
           {{ router.text }}
         </span>
       </div>
     </div>
   </div>
   <div class="header-right">
-    <span class="pointer">Git-Hub</span>
-    <span class="pointer">Email</span>
-    <span class="pointer">Twiter</span>
+    <span class="pointer">
+      <a href="https://github.com/guobin211/material-pro" target="_blank">Git-Hub</a>
+    </span>
+    <span class="pointer">
+      <a href="mailto:844922881@qq.com">Email</a>
+    </span>
+    <span class="pointer">
+      <a href="">Twiter</a>
+    </span>
   </div>
 </div>

@@ -8,7 +8,5 @@ import { environment } from 'src/environments/environment'
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
-  ngOnInit(): void {
-    console.log(environment)
-  }
+  ngOnInit() {}
 }

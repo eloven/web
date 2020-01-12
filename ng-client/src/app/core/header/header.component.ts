@@ -7,22 +7,38 @@ import { Router } from '@angular/router'
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  activeIndex = 0
   routerLinkList = [
-    { path: '', text: '表单' },
-    { path: '', text: 'Http' }
+    { path: 'login', text: 'User' },
+    { path: 'table', text: 'Table' },
+    { path: 'form', text: 'Form' }
   ]
+
   constructor(private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.initActive()
+  }
 
-  navToPath(p: string) {
+  navToPath(p: string, i: number) {
     this.router
       .navigate([p])
-      .then(res => {
-        console.log(res)
+      .then(() => {
+        this.activeIndex = i
       })
-      .catch(e => {
-        console.log(e)
+      .catch(() => {
+        history.go(-1)
       })
+  }
+
+  private initActive() {
+    for (let i = 0; i < this.routerLinkList.length; i++) {
+      const activatedRouteElement = this.routerLinkList[i]
+      if (window.location.href.includes(activatedRouteElement.path)) {
+        this.activeIndex = i
+        return
+      }
+    }
+    this.activeIndex = 0
   }
 }

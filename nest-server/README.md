@@ -1,19 +1,3 @@
-## Description
-```bash
-    libs
-    src
-        config
-        core
-        decorator
-        filter
-        guard
-        middleware
-        module
-            user
-        pipe
-
-```
-
 ## Installation
 
 ```bash
@@ -45,7 +29,3 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## License
-
-  Nest is [MIT licensed](LICENSE).

@@ -12,8 +12,8 @@ Angular and NestJS
 
 ```bash
 
-   ng-client   // angular web
+   ng-client   // Angular
 
-   nest-server  // nest.js server
+   nest-server  // NestJs
 
 ```

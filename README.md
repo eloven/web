@@ -17,3 +17,12 @@ Angular and NestJS
    nest-server  // NestJs
 
 ```
+
+### NestJs
+
+```
+   src
+      config        // node mongodb port config
+      shared        // public module
+      main.ts       // entry
+```

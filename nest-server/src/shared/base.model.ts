@@ -6,11 +6,10 @@ export abstract class BaseModel<T> extends Typegoose {
   @prop()
   @ApiProperty({ type: String, format: 'date-time' })
   createdAt?: Date;
-
   @prop()
   @ApiProperty({ type: String, format: 'date-time' })
   updatedAt?: Date;
-
+  @prop()
   @ApiProperty()
   id: string;
 }
@@ -18,10 +17,8 @@ export abstract class BaseModel<T> extends Typegoose {
 export class BaseModelVm {
   @ApiProperty({ type: String, format: 'date-time' })
   createdAt?: Date;
-
   @ApiProperty({ type: String, format: 'date-time' })
   updatedAt?: Date;
-
   @ApiProperty()
   id: string;
 }

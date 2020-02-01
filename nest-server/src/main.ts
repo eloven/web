@@ -3,8 +3,9 @@ import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  const hostDomain = AppModule.isDev ? `${AppModule.host}:${AppModule.port}` : AppModule.host;
+  const app = await NestFactory.create(AppModule, {
+    logger: AppModule.isDev
+  });
   const options = new DocumentBuilder()
     .setTitle('Material-Pro')
     .setDescription('API docs')

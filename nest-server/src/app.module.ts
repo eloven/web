@@ -6,6 +6,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import configuration from './config/configuration';
 import { ConfigEnum } from './config/config.enum';
 import { MongooseModule } from '@nestjs/mongoose';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -20,7 +21,8 @@ import { MongooseModule } from '@nestjs/mongoose';
       useNewUrlParser: true,
       useUnifiedTopology: true
     }),
-    SharedModule
+    SharedModule,
+    UserModule
   ],
   controllers: [AppController],
   providers: [AppService]

@@ -22,7 +22,16 @@ Angular and NestJS
 
 ```
    src
-      config        // node mongodb port config
-      shared        // public module
-      main.ts       // entry
+      config                                    // node mongodb port config
+      shared                                    // public module
+      user
+          models
+                view-models
+                     register-vm.model.ts       // api view-model
+                user.model.ts                   // database model
+          user.controller.ts
+          user.service.ts
+          user.module.ts
+      app.module.ts
+      main.ts                                    // entry
 ```

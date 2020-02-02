@@ -24,11 +24,8 @@ export class User extends BaseModel<User> {
   })
   sex: number;
 
-  // @prop({
-  //   enum: UserRole,
-  //   default: UserRole.USER
-  // })
-  // role: UserRole;
+  @prop()
+  role: UserRole;
 
   static get model(): ModelType<User> {
     return new User().getModelForClass(User, { schemaOptions });

@@ -1,8 +1,9 @@
-import { Body, Controller, HttpException, HttpStatus, Post } from '@nestjs/common';
+import { Body, Controller, Get, HttpException, HttpStatus, Logger, Post } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { User } from './models/user.model';
 import { RegisterVm } from './models/view-models/register-vm.model';
 import { UserService } from './user.service';
+import { LoginVm } from './models/view-models/login-vm.model';
 
 @Controller('user')
 @ApiTags(User.modelName)
@@ -12,7 +13,6 @@ export class UserController {
 
   @Post('register')
   async register(@Body() vm: RegisterVm) {
-    console.log('register');
     const { username, password } = vm;
 
     if (!username) {
@@ -35,7 +35,26 @@ export class UserController {
     }
 
     const newUser = await this._userService.register(vm);
-    console.log(newUser);
+    Logger.log(`register(): ${newUser}`);
     return newUser;
+  }
+
+  @Post('login')
+  async login(@Body() vm: LoginVm) {
+    const { username, password } = vm;
+    if (!username) {
+      throw new HttpException('Username is required', HttpStatus.BAD_REQUEST);
+    }
+
+    if (!password) {
+      throw new HttpException('Password is required', HttpStatus.BAD_REQUEST);
+    }
+
+    return this._userService.login(vm);
+  }
+
+  @Get()
+  async pageQuery() {
+    return this._userService.findAll();
   }
 }

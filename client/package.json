@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --stats-json",
+    "build-aot": "ng build --prod --aot",
+    "stats": "webpack-bundle-analyzer ./dist/client/stats-es2015.json",
     "test": "ng test",
     "lint": "ng lint",
     "publish": "ng build --prod && ng deploy",
@@ -48,6 +50,7 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "webpack-bundle-analyzer": "^3.6.0"
   }
 }

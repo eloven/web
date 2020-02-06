@@ -1,0 +1,22 @@
+<div>
+  <mat-grid-list cols="3" rowHeight="2:1">
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile colspan="1">
+      <form class="login-form" [formGroup]="loginForm">
+        <mat-form-field>
+          <input matInput autocomplete="false" placeholder="Username" formControlName="username" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput autocomplete="false" placeholder="Password" formControlName="password" required>
+        </mat-form-field>
+        <div class="full-width">
+          <button type="button" mat-raised-button color="primary" (click)="doLogin()">登录</button>
+          <span>
+            <a routerLink="/user/register">注册</a>
+          </span>
+        </div>
+      </form>
+    </mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+  </mat-grid-list>
+</div>

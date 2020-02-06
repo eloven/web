@@ -1,9 +1,19 @@
-import { Body, Controller, Get, HttpException, HttpStatus, Logger, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  HttpException,
+  HttpStatus,
+  Logger,
+  Post,
+  Query
+} from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { User } from './models/user.model';
 import { RegisterVm } from './models/view-models/register-vm.model';
 import { UserService } from './user.service';
 import { LoginVm } from './models/view-models/login-vm.model';
+import { PageQuery } from '../shared/base.filter';
 
 @Controller('user')
 @ApiTags(User.modelName)
@@ -53,8 +63,9 @@ export class UserController {
     return this._userService.login(vm);
   }
 
-  @Get()
-  async pageQuery() {
-    return this._userService.findAll();
+  @Get("query")
+  async pageQuery(@Query() pageQuery: PageQuery)  {
+    Logger.log(pageQuery);
+    return this._userService.findAll({}, pageQuery);
   }
 }

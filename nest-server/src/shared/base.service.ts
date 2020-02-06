@@ -1,6 +1,7 @@
 import { Types } from 'mongoose';
 import { InstanceType, ModelType, Typegoose } from 'typegoose';
 import { Logger } from '@nestjs/common';
+import { formatPageQuery, PageQuery, PageResponse } from './base.filter';
 
 export abstract class BaseService<T extends Typegoose> {
   protected model: ModelType<T>;
@@ -13,16 +14,27 @@ export abstract class BaseService<T extends Typegoose> {
     return `${this.model.modelName}Vm`;
   }
 
-  async findAll(filter = {}): Promise<InstanceType<T>[]> {
-    return this.model.find(filter).exec();
+  async findAll(filter = {}, pageQuery: PageQuery = {pageNum: 1, pageSize: 10}): Promise<PageResponse<T>> {
+    pageQuery = formatPageQuery(pageQuery);
+    const total: number = await this.model.countDocuments(filter);
+    const list: InstanceType<T>[] = await this.model.find(filter)
+                                          .sort({})
+                                          .limit(pageQuery.pageSize)
+                                          .skip(pageQuery.pageSize * (pageQuery.pageNum - 1))
+                                          .exec();
+
+    return {
+      list,
+      total
+    };
   }
 
-  async findOne(filter = {}): Promise<InstanceType<T>>  {
+  async findOne(filter = {}): Promise<InstanceType<T>> {
     Logger.log('findOne');
     return this.model.findOne(filter).exec();
   }
 
-  async findById(id: string): Promise<InstanceType<T>>  {
+  async findById(id: string): Promise<InstanceType<T>> {
     return this.model.findById(this.toObjectId(id)).exec();
   }
 

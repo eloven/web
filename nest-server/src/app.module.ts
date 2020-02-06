@@ -19,7 +19,8 @@ import { UserModule } from './user/user.module';
       retryAttempts: 3,
       useFindAndModify: false,
       useNewUrlParser: true,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
+      useCreateIndex: true
     }),
     SharedModule,
     UserModule

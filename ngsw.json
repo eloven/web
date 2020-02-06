@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1580707100027,
+  "timestamp": 1580998719460,
   "index": "https://guobin211.github.io/material-pro/index.html",
   "assetGroups": [
     {
@@ -8,16 +8,18 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
+        "https://guobin211.github.io/material-pro/5-es2015.a2087c735988ef2f6272.js",
+        "https://guobin211.github.io/material-pro/5-es5.a2087c735988ef2f6272.js",
         "https://guobin211.github.io/material-pro/favicon.ico",
         "https://guobin211.github.io/material-pro/index.html",
-        "https://guobin211.github.io/material-pro/main-es2015.2345968b800b148e8934.js",
-        "https://guobin211.github.io/material-pro/main-es5.2345968b800b148e8934.js",
+        "https://guobin211.github.io/material-pro/main-es2015.88c969ca7b1634ca1af2.js",
+        "https://guobin211.github.io/material-pro/main-es5.88c969ca7b1634ca1af2.js",
         "https://guobin211.github.io/material-pro/manifest.webmanifest",
         "https://guobin211.github.io/material-pro/polyfills-es2015.5b10b8fd823b6392f1fd.js",
         "https://guobin211.github.io/material-pro/polyfills-es5.3e8196928d184a6e5319.js",
-        "https://guobin211.github.io/material-pro/runtime-es2015.c5fa8325f89fc516600b.js",
-        "https://guobin211.github.io/material-pro/runtime-es5.c5fa8325f89fc516600b.js",
-        "https://guobin211.github.io/material-pro/styles.371d91118f9955c756b6.css"
+        "https://guobin211.github.io/material-pro/runtime-es2015.25e9be509c3d1ac73419.js",
+        "https://guobin211.github.io/material-pro/runtime-es5.25e9be509c3d1ac73419.js",
+        "https://guobin211.github.io/material-pro/styles.c41870a26d0189f8532a.css"
       ],
       "patterns": []
     },
@@ -40,6 +42,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "https://guobin211.github.io/material-pro/5-es2015.a2087c735988ef2f6272.js": "72bbafda4890d937654d7a4ae74c38eff3acecb4",
+    "https://guobin211.github.io/material-pro/5-es5.a2087c735988ef2f6272.js": "0c1e24b35bc28bb182b26a1c01d451bdc097885b",
     "https://guobin211.github.io/material-pro/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "https://guobin211.github.io/material-pro/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "https://guobin211.github.io/material-pro/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -49,15 +53,15 @@
     "https://guobin211.github.io/material-pro/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://guobin211.github.io/material-pro/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://guobin211.github.io/material-pro/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://guobin211.github.io/material-pro/index.html": "7a767d689a28ba9e36d15bc664ee4b702060387c",
-    "https://guobin211.github.io/material-pro/main-es2015.2345968b800b148e8934.js": "87c52ddb187ddb5e5e65dcb8319314d2489ce2b1",
-    "https://guobin211.github.io/material-pro/main-es5.2345968b800b148e8934.js": "ab9bea2dcdccba6cbc15bc42f1194cf21c408a94",
+    "https://guobin211.github.io/material-pro/index.html": "1d2cf77b904d0953cc7c6864a29e2ba74186cb50",
+    "https://guobin211.github.io/material-pro/main-es2015.88c969ca7b1634ca1af2.js": "69601b64fe7e808c9cf4bdf41fd63a4ed80ec779",
+    "https://guobin211.github.io/material-pro/main-es5.88c969ca7b1634ca1af2.js": "9d83ba2b90972923759efca21d2e39bb2bd769d9",
     "https://guobin211.github.io/material-pro/manifest.webmanifest": "5fd07573479840a6de0c4b4fe46f603c79b70a9a",
     "https://guobin211.github.io/material-pro/polyfills-es2015.5b10b8fd823b6392f1fd.js": "9abfe15f17820a646e3d51c420908d9f8f7b69b8",
     "https://guobin211.github.io/material-pro/polyfills-es5.3e8196928d184a6e5319.js": "a9abcb7b9e74feed315773004b623373fdf3fada",
-    "https://guobin211.github.io/material-pro/runtime-es2015.c5fa8325f89fc516600b.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "https://guobin211.github.io/material-pro/runtime-es5.c5fa8325f89fc516600b.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "https://guobin211.github.io/material-pro/styles.371d91118f9955c756b6.css": "7baa502a1d62c9647fe70c71555e947318d546d6"
+    "https://guobin211.github.io/material-pro/runtime-es2015.25e9be509c3d1ac73419.js": "3e53096505711108f9357cd320adc65cb4c76119",
+    "https://guobin211.github.io/material-pro/runtime-es5.25e9be509c3d1ac73419.js": "13b118e85f40407b7862a07c037263698e86feb1",
+    "https://guobin211.github.io/material-pro/styles.c41870a26d0189f8532a.css": "52af60e03f7300868ea8cebac9ed03b98d1cae97"
   },
   "navigationUrls": [
     {

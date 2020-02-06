@@ -1,0 +1,28 @@
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1111;
+  overflow: auto;
+}
+
+.dialog {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  .header {
+    height: 48px;
+    background-color: #409EFF;
+  }
+  .content{
+    background-color: #F56C6C;
+    min-height: 112px;
+  }
+  .footer {
+    height: 64px;
+    background-color: #E6A23C;
+  }
+}

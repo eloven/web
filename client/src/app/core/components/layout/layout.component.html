@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <button mat-button="" title="Docs menu" class="mat-button" (click)="isOpen = !isOpen">
+    <button title="Docs menu" class="mat-button" (click)="isOpen = !isOpen">
       <span class="mat-button-wrapper">
         <mat-icon
           svgicon="menu"
@@ -13,14 +13,12 @@
           </svg>
         </mat-icon>
       </span>
-      <div matripple="" class="mat-button-ripple mat-ripple"></div>
-      <div class="mat-button-focus-overlay"></div>
     </button>
     <app-header></app-header>
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-drawer-container class="page">
-  <mat-drawer mode="over" [opened]="isOpen">
+  <mat-drawer mode="side" [opened]="isOpen">
     <app-side-bar></app-side-bar>
   </mat-drawer>
   <mat-drawer-content>

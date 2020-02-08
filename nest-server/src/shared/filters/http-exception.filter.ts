@@ -9,8 +9,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
 
     if (error.getStatus() === HttpStatus.UNAUTHORIZED) {
       if (typeof error.response !== 'string') {
-        error.response['message'] =
-          error.response.message || '无访问权限';
+        error.response['message'] = error.response.message || '无访问权限';
       }
     }
 

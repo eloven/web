@@ -8,10 +8,10 @@ import { MessageModule } from './message.module';
   providedIn: MessageModule
 })
 export class MessageService {
-  constructor(private _snackBar: MatSnackBar) { }
+  constructor(private snackBar: MatSnackBar) { }
 
   open(messageOptions: MessageOptions): MatSnackBarRef<MessageComponent> {
-    return this._snackBar.openFromComponent(MessageComponent, {
+    return this.snackBar.openFromComponent(MessageComponent, {
       duration: messageOptions.duration || 2000,
       verticalPosition: 'top',
       data: messageOptions.message,

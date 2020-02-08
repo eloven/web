@@ -10,18 +10,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent implements OnInit {
-  private _transformer = (node: NavNode, level: number) => {
+  private transformer = (node: NavNode, level: number) => {
     return {
       expandable: !!node.children && node.children.length > 0,
       title: node.title,
       fullPath: node.fullPath,
-      level: level
+      level
     };
-  };
+  }
+
   treeControl = new FlatTreeControl<NavFlatNode>(
     node => node.level, node => node.expandable);
+
   treeFlattener = new MatTreeFlattener(
-    this._transformer, node => node.level, node => node.expandable, node => node.children);
+    this.transformer, node => node.level, node => node.expandable, node => node.children);
+
   dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
   constructor(private router: Router) {

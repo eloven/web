@@ -14,14 +14,18 @@ export abstract class BaseService<T extends Typegoose> {
     return `${this.model.modelName}Vm`;
   }
 
-  async findAll(filter = {}, pageQuery: PageQuery = {pageNum: 1, pageSize: 10}): Promise<PageResponse<T>> {
+  async findAll(
+    filter = {},
+    pageQuery: PageQuery = { pageNum: 1, pageSize: 10 }
+  ): Promise<PageResponse<T>> {
     pageQuery = formatPageQuery(pageQuery);
     const total: number = await this.model.countDocuments(filter);
-    const list: InstanceType<T>[] = await this.model.find(filter)
-                                          .sort({})
-                                          .limit(pageQuery.pageSize)
-                                          .skip(pageQuery.pageSize * (pageQuery.pageNum - 1))
-                                          .exec();
+    const list: InstanceType<T>[] = await this.model
+      .find(filter)
+      .sort({})
+      .limit(pageQuery.pageSize)
+      .skip(pageQuery.pageSize * (pageQuery.pageNum - 1))
+      .exec();
 
     return {
       list,
@@ -51,7 +55,7 @@ export abstract class BaseService<T extends Typegoose> {
     return this.model.findByIdAndUpdate(this.toObjectId(id), item, { new: true }).exec();
   }
 
-  async clearCollection(filter = {}): Promise<{ ok?: number; n?: number; }> {
+  async clearCollection(filter = {}): Promise<{ ok?: number; n?: number }> {
     return this.model.deleteMany(filter).exec();
   }
 

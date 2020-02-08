@@ -18,7 +18,6 @@ import { PageQuery } from '../shared/base.filter';
 @Controller('user')
 @ApiTags(User.modelName)
 export class UserController {
-
   constructor(private readonly _userService: UserService) {}
 
   @Post('register')
@@ -63,8 +62,8 @@ export class UserController {
     return this._userService.login(vm);
   }
 
-  @Get("query")
-  async pageQuery(@Query() pageQuery: PageQuery)  {
+  @Get('query')
+  async pageQuery(@Query() pageQuery: PageQuery) {
     Logger.log(pageQuery);
     return this._userService.findAll({}, pageQuery);
   }

@@ -20,7 +20,7 @@ export class User extends BaseModel<User> {
   nickname: string;
 
   @prop({
-    required: false,
+    required: false
   })
   sex: number;
 
@@ -38,5 +38,4 @@ export class User extends BaseModel<User> {
   static createModel(): InstanceType<User> {
     return new this.model();
   }
-
 }

@@ -17,8 +17,10 @@ export class UserService extends BaseService<User> {
    * @param userModel
    * @param _authService
    */
-  constructor(@InjectModel(User.modelName) private readonly userModel: ModelType<User>,
-              @Inject(forwardRef(() => AuthService)) private readonly _authService: AuthService) {
+  constructor(
+    @InjectModel(User.modelName) private readonly userModel: ModelType<User>,
+    @Inject(forwardRef(() => AuthService)) private readonly _authService: AuthService
+  ) {
     super();
     this.model = userModel;
   }

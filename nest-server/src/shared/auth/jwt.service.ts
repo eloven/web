@@ -7,9 +7,7 @@ import configuration from '../../config/configuration';
 
 @Injectable()
 export class JwtService extends PassportStrategy(Strategy) {
-
-  constructor(
-    private readonly _authService: AuthService) {
+  constructor(private readonly _authService: AuthService) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
       secretOrKey: configuration().JWT_KEY

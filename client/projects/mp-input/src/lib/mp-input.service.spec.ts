@@ -6,7 +6,7 @@ describe('MpInputService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: MpInputService = TestBed.get(MpInputService);
+    const service: MpInputService = TestBed.inject(MpInputService);
     expect(service).toBeTruthy();
   });
 });

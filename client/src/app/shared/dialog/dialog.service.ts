@@ -8,17 +8,18 @@ import { DialogComponent } from './dialog.component';
   providedIn: DialogModule
 })
 export class DialogService {
-  private _queue: OverlayRef[] = [];
-  constructor(private _overlay: Overlay,) { }
+  private queue: OverlayRef[] = [];
+
+  constructor(private overlay: Overlay) { }
 
   open() {
-    const last = this._queue.pop();
+    const last = this.queue.pop();
     if (last) {
       last.dispose();
     }
-    const overlayRef: OverlayRef = this._overlay.create({width: 600, height: 200});
+    const overlayRef: OverlayRef = this.overlay.create({ width: 600, height: 200 });
     const dialogComponentComponentPortal = new ComponentPortal(DialogComponent);
     overlayRef.attach(dialogComponentComponentPortal);
-    this._queue.push(overlayRef);
+    this.queue.push(overlayRef);
   }
 }

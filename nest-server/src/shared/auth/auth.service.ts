@@ -14,7 +14,7 @@ export class AuthService {
   constructor(
     @Inject(forwardRef(() => UserService))
     readonly _userService: UserService,
-    private readonly _configurationService: ConfigService,
+    private readonly _configurationService: ConfigService
   ) {
     this.jwtOptions = { expiresIn: '12h' };
     this.jwtKey = _configurationService.get(ConfigEnum.JWT_KEY);

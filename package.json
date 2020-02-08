@@ -1,0 +1,34 @@
+{
+  "name": "material-pro",
+  "version": "0.0.0",
+  "description": "Angular and NestJs FullStack",
+  "scripts": {
+    "lint": "npm run lint:client && npm run lint:server",
+    "lint:client": "cd client && npm run lint",
+    "lint:server": "cd nest-server && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guobin211/material-pro.git"
+  },
+  "keywords": [
+    "Angular",
+    "Web",
+    "NestJs"
+  ],
+  "author": "GuoBin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guobin211/material-pro/issues"
+  },
+  "homepage": "https://github.com/guobin211/material-pro#readme",
+  "devDependencies": {
+    "husky": "^4.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run lint"
+    }
+  }
+}

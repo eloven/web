@@ -1,4 +1,4 @@
-import { USER_ROUTES } from './user/user-routing.module'
+import { USER_ROUTES } from './user/user-routing.module';
 import { NavNode } from '../core/components/side-bar/build-nav';
 
 export const PAGE_ROUTES: NavNode[] = [

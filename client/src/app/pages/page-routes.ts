@@ -7,7 +7,7 @@ export const PAGE_ROUTES: NavNode[] = [
     title: '仪表盘',
   },
   {
-    title: '用户模块',
+    title: '用户管理',
     fullPath: '',
     children: USER_ROUTES
   }

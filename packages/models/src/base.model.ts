@@ -1,4 +1,5 @@
 export abstract class BaseModel {
   public readonly id: string
-  public readonly modelId: string
+  public createTime: Date
+  public updateTime: Date
 }

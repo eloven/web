@@ -10,9 +10,9 @@ export abstract class BaseController<T> {
   /**
    * put
    */
-  public put: () => Promise<T>;
+  public abstract put: () => Promise<T>;
   /**
    * delete
    */
-  public delete: () => Promise<T>;
+  public abstract delete: () => Promise<T>;
 }

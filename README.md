@@ -12,9 +12,14 @@ MonoRepo for Angular and NestJS
 
 ```bash
 
-   ng-client   // Angular
+   packages
+        controllers
+        models
+        services
 
-   nest-server  // NestJs
+   projects
+        angular-client      // Angular
+        nest-server         // NestJs
 
 ```
 

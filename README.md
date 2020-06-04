@@ -2,7 +2,7 @@
 
 <div align="center">
 
-Angular and NestJS
+MonoRepo for Angular and NestJS
 
 </div>
 

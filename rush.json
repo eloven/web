@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.24.2",
+  "pnpmVersion": "2.15.1",
+  "pnpmOptions": {},
+  "nodeSupportedVersionRange": ">=10.13.0 <14.0.0",
+  "gitPolicy": {},
+  "repository": {},
+  "eventHooks": {
+    "preRushInstall": [],
+    "postRushInstall": [],
+    "preRushBuild": [],
+    "postRushBuild": []
+  },
+  "variants": [],
+  "projects": [
+    {
+      "packageName": "controllers",
+      "projectFolder": "packages/controllers",
+      "reviewCategory": "packages"
+    },
+    {
+      "packageName": "models",
+      "projectFolder": "packages/models",
+      "reviewCategory": "packages"
+    },
+    {
+      "packageName": "services",
+      "projectFolder": "packages/services",
+      "reviewCategory": "packages"
+    }
+  ]
+}

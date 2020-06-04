@@ -6,11 +6,5 @@ Thumbs.db
 *.lock
 node_modules
 
-client/dist
-nest-server/dist
-client/yarn.lock
-client/package-lock.json
-nest-server/yarn.lock
-nest-server/package-lock.json
 package-lock.json
 yarn.lock

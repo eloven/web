@@ -8,7 +8,7 @@
   "scripts": {
     "pre-build": "node scripts/pre-build.js",
     "lint": "eslint .eslintrc.js",
-    "mvc": "parcel packages/web-mvc/index.html"
+    "mvc": "parcel packages/web-mvc/index.html -p dist"
   },
   "types": "",
   "tsd": {},

@@ -85,8 +85,7 @@ export class Vue {
   rerender(domKey: string) {
     const ul = this._domMap.get(domKey)
     if (ul) {
-      ul.innerHTML = ''
-      ul.appendChild(parseArray(watcher["todoList"]))
+      Vue.render(ul, parseArray(watcher["todoList"]))
     }
   }
 
